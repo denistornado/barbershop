@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- Код для примера -->
+
+<% const menuItems = [
+    {title: 'HairCare', link: '#'},
+    {title: 'Color', link: '#'},
+    {title: 'Styling', link: '#'}
+    /* ... */
+]; %>
+
+<header class="header">
+    <div class="header_top">
+<div class="header_top_left"> <div class="header_top_left__text"> <span>Nearliest salon</span>  <img src="img/ico_dropdown.svg" height="10px" width="10px"  alt=""><br><span>Plush Salon 92101</span></div>
+</div>
+<div class="header_top_center">
+    <div class="header_top_center__text"><span id="main">TAM-TARAM</span></div>
+</div>
+ <div class="header_top_right"> <div class="header_top_right__text"><img src="img/ico_search.svg" height="15px" width="15px" alt=""></div></div>
+    </div>
+    <div class="header_bottom">
+       <div class="header_bottom__item">
+        <ul >
+           
+            <li><a href="#">HAIRCARE</a></li>
+            <li><a href="#">COLOR</a></li>
+            <li><a href="#">STYLING</a></li>
+            <li><a href="#">TEXTURE</a></li>
+            <li><a href="#">GET INSIPED</a></li>
+            <li><a href="#">SOCIAL</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PROFESSIONAL</a></li>
+          </ul>
+       </div>
+    </div> 
+   
+</header>
+<div class="navigation">
+    <ul class="navigation__ul">
+        <li class="navigation__li">HOME</li>
+        <li class="navigation__li">/</li>
+        <li class="navigation__li"><a class="navigation__a" href="">VIDEOS</a></li>
+    </ul>
+</div>
+<div class="main">
+    <div class="main_title"><h1>VIDEOS</h1></div>
+    <div class="main_video">
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed/8H6dYUgQKB8?start=4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class="main_discription"> <strong> ipsum dolor sit amet consectetur adipisicing elit. Fugiat debitis praesentium quos ducimus fugit. Voluptatibus quia sequi eius dolore quae, asperiores consectetur accusantium suscipit adipisci. Provident delectus animi sequi. Consectetur!</strong></p>
+        <hr color="gray">
+        <div class="main_step-by-step">
+            <div class="main_step-by-step__title">
+                <h2>STEP <span class="change-color">BY</span> STEP</h2>
+            </div>
+            <div class="main_step-by-step__gallery"></div>
+        </div>
+        <div class="main_step-by-step">
+            <div class="main_craft-education__title">
+                <h2>CRAFT <span class="change-color">EDUCATION</span> </h2>
+            </div>
+            <div class="main_craft-education__gallery"></div>
+        </div>
+        <div class="main_inspiration">
+            <div class="main_craft-inspiration__title">
+                <h2><span>INSPIRATION</span></h2>
+            </div>
+            <div class="main_inspiration__gallery"></div>
+        </div>
+    </div>
+    
+</div>
+<footer class="footer" >
+    <div class="footer_left">
+        <div class="footer_left__text">
+        <span>PRIVATE POLICE &nbsp; TERMS OF USE <br> CONTACT US NEWSLETTER SITEMAP</span>
+    </div>
+    
+    </div>
+    <div class="footer_center">
+          
+            
+    </div>
+    <div class="footer_right"> 
+        <div class="footer_right__text">
+<span>LOCATION:<span id="location">UNITED STATES</span><br>LANGUAGE:<span id="language">ENGLISH</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+<script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

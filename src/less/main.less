@@ -1,0 +1,192 @@
+@import 'media';
+
+// Код для примера
+
+
+.change-color{
+    color: rgb(240, 63, 63);
+}
+
+
+.header{
+    width: 100%;
+    &_top{
+        background: rgb(105, 23, 206);
+        height: 80px;
+        &_left{
+            float: left;
+            height: 80px;
+width: 33%;
+&__text{
+    font-size: 14px;
+    height: 80px;
+    color: white;
+   padding-left: 20px;
+   display: table-cell;
+   vertical-align: middle;
+}
+        }
+        &_center{
+       
+            float: left;
+            height: 80px;
+width: 33%;
+&__text{
+    
+    font-size: 28px;
+height: 80px;
+    color: white;
+  line-height: 80px;
+  letter-spacing: 20px;
+   text-align: center;
+}
+
+        }
+        &_right{
+       
+            float: left;
+            height: 80px;
+width: 33%;
+&__text{
+    
+    font-size: 28px;
+height: 80px;
+    color: white;
+  line-height: 80px;
+  letter-spacing: 20px;
+   text-align: right;
+   padding-right: 20px;
+}
+
+        }
+    }
+    &_bottom{
+        background: rgb(32,32,32);
+        height: 50px;
+        &__item{
+            height: 50px;
+            width: 80%;
+            margin-left: auto;
+    margin-right: auto;
+        }
+        &__item ul{
+            background: rgb(32,32,32);
+           
+            padding: 0; margin: 0;
+        }
+        &__item li{
+           float:left;
+           width: 11%;
+           list-style-type: none;
+        }
+        &__item a{
+            height: 50px;
+            display: block;
+           text-decoration: none;
+           // padding: 1em;
+           font-size: 14px;
+            text-align: center;
+            color:white;
+ line-height: 50px;
+         }
+    }
+}
+.navigation{
+    margin-left:20px; 
+    height: 50px;
+    margin-top: 10px;
+    &__ul{
+        padding: 0; margin: 0;
+    }
+    &__li{
+        float:left;
+      padding: 2px;
+        list-style-type: none;
+    }
+    &__a{
+   
+    }
+}
+.main{
+    
+    height: 1500px;
+    width: 80%;
+    margin-left: auto;
+margin-right: auto;
+&_discription{
+    font-size: 30px;
+}
+&_step-by-step{
+    margin-top: 40px;
+    height: 200px;
+&__gallery{
+    height: 150px;
+    background: wheat;
+}
+}
+&_craft-education{
+    height: 200px;
+    &__gallery{
+        height: 150px;
+        background: wheat;
+    }
+}
+&_inspiration{
+    margin-top: 40px;
+    height: 200px;
+    &__gallery{
+        height: 150px;
+        background: wheat;
+    }
+}
+}
+hr{
+    color: gray;
+    size: 5px;
+}
+.footer{
+   background: rgb(32,32,32);
+   height: 50px;
+   width: 100%;
+   display:table;
+   &_left{
+    float: left;
+    
+    height: 50px;
+width: 33%;
+&__text{
+    
+    font-size: 10px;
+    height: 50px;
+    color:gainsboro;
+   padding-left: 20px;
+   display: table-cell;
+   vertical-align: middle;
+}
+   }
+   &_center{
+    float: left;
+       height: 50px;
+       width: 33%;
+
+
+
+
+   }
+   &_right{
+    float: right;
+    height: 50px;
+
+text-align: right;
+&__text{
+    
+    font-size: 10px;
+    height: 50px;
+        color: white;
+      display:table-cell;
+    vertical-align: middle;
+      
+       padding-right: 20px;
+}
+   }
+}
