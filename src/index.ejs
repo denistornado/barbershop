@@ -11,7 +11,23 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="jquery.min.js"></script>
-    
+    <script type= "text/javascript">/*<![CDATA[*/
+$(function(){
+	var div = $('div.sc_menu'),
+		ul = $('ul.sc_menu'),
+		ulPadding = 15;
+	var divWidth = div.width();
+
+	div.css({overflow: 'hidden'});
+
+	var lastLi = ul.find('li:last-child');
+	div.mousemove(function(e){
+		var ulWidth = lastLi[0].offsetLeft + lastLi.outerWidth() + ulPadding;	
+		var left = (e.pageX - div.offset().left) * (ulWidth-divWidth) / divWidth;
+		div.scrollLeft(left);
+	});
+});
+/*]]>*/</script>
 </head>
 <body>
 
@@ -80,9 +96,21 @@
         <hr color="gray">
         <div class="main_step-by-step">
             <div class="main_step-by-step__title">
-                <h2>STEP <span class="change-color">BY</span> STEP</h2>
+                <h2>STEP <span class="change-color">BYщ</span> STEP</h2>
             </div>
-            <div class="main_step-by-step__gallery"></div>
+            <div class="main_step-by-step__gallery">
+                    <div class="sc_menu">
+                            <ul class="sc_menu">
+                                <li><a class="zoom" href="http://www.youtube.com/embed/z8M0Fa1JVco?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/z8M0Fa1JVco/mqdefault.jpg" width="300" height="200" alt=" "/></a></li>
+                                <li><a class="zoom" href="http://www.youtube.com/embed/Wi2KcdoCuo4?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/Wi2KcdoCuo4/mqdefault.jpg" width="300" height="200" alt=" "/></a></li>
+                                <li><a class="zoom" href="http://www.youtube.com/embed/8H6dYUgQKB8?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/8H6dYUgQKB8/mqdefault.jpg" width="300" height="200" alt=" "/></a></li>
+                                <li><a class="zoom" href="http://www.youtube.com/embed/PZjGrmHdFME?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/PZjGrmHdFME/mqdefault.jpg" width="300" height="200" alt=" "/></a></li>
+                                <li><a class="zoom" href="http://www.youtube.com/embed/_wLGr24VeoI?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/_wLGr24VeoI/mqdefault.jpg" width="300" height="200" alt=" "/></a></li>
+                                <li><a class="zoom" href="http://www.youtube.com/embed/DG4FAU5qmMY?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/DG4FAU5qmMY/mqdefault.jpg" width="300" height="200" alt=" "/></a></li>
+                               
+                            </ul>
+                        </div>
+            </div>
         </div>
         <div class="main_step-by-step">
             <div class="main_craft-education__title">

@@ -110,7 +110,7 @@ height: 80px;
             height: 50px;
             display: block;
            text-decoration: none;
-           // padding: 1em;
+        
            font-size: 14px;
             text-align: center;
             color:white;
@@ -136,7 +136,7 @@ height: 80px;
 }
 .main{
     
-    height: 1500px;
+    height: 1600px;
     width: 80%;
     margin-left: auto;
 margin-right: auto;
@@ -144,10 +144,10 @@ margin-right: auto;
     font-size: 30px;
 }
 &_step-by-step{
-    margin-top: 40px;
-    height: 200px;
+    margin-top: 60px;
+    height: 220px;
 &__gallery{
-    height: 150px;
+    height: 220px;
     background: wheat;
 }
 }
@@ -159,7 +159,7 @@ margin-right: auto;
     }
 }
 &_inspiration{
-    margin-top: 40px;
+    margin-top: 60px;
     height: 200px;
     &__gallery{
         height: 150px;
@@ -330,4 +330,81 @@ text-align: right;
   input::placeholder {
     color: #fff;
   }
-  
+  div.sc_menu {
+	position: relative;
+	height: 200x; /*высота блока*/
+	width: 90%;  /* ширина блока*/
+	
+	margin-left: 50px;
+	margin-right: 50px;
+}
+ul.sc_menu {
+	display: block;
+	height: 115px;
+	width: 2000px;	/*длина панели с видео*/
+	padding: 5px 0 0 15px; 
+	margin: 0;
+	background: url(''); /*фоновое изображение*/		
+	list-style: none;
+}
+.sc_menu li {
+	display: block;
+	float: left;	
+	padding: 0 4px;
+}
+.sc_menu a {
+	display: block;
+	text-decoration: none;
+}
+.sc_menu span {
+	display: block;
+	margin-top: 3px;
+	
+	text-align: center;
+	font-size: 12px;	
+	color: #000000;
+}
+
+.sc_menu a:hover span {
+	display: block;
+	color: #0000ff;
+	cursor: default;	/*параметры курсора*/
+}
+.sc_menu img {
+	border: 3px #fff solid;	
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.sc_menu a:hover img {
+	filter:alpha(opacity=50);	
+	opacity: 0.5;
+	cursor: default;	/*параметры курсора*/	
+}
+
+.sc_menu2 a {
+	display: block;
+	text-decoration: none;
+}
+.sc_menu2 span {
+//	display: block;
+//	margin-top: 0px;
+	
+	text-align: center;
+	font-size: 12px;	
+	color: #000000;
+}
+
+.sc_menu2 a:hover span {
+//	display: block;
+	color: #0000ff;
+}
+.sc_menu2 img {
+	border: 3px #fff solid;	
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.sc_menu2 a:hover img {
+	border: 3px #ebebeb solid;	
+	filter:alpha(opacity=50);	
+	opacity: 0.5;
+}
