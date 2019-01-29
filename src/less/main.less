@@ -2,7 +2,10 @@
 
 // Код для примера
 
-
+body{
+    padding: 0;
+    margin: 0;
+}
 .change-color{
     color: rgb(240, 63, 63);
 }
@@ -148,7 +151,7 @@ margin-right: auto;
     height: 220px;
 &__gallery{
     height: 220px;
-    background: wheat;
+   
 }
 }
 &_craft-education{
@@ -338,44 +341,16 @@ text-align: right;
 	margin-left: 50px;
 	margin-right: 50px;
 }
-ul.sc_menu {
-	display: block;
-	height: 115px;
-	width: 2000px;	/*длина панели с видео*/
-	padding: 5px 0 0 15px; 
-	margin: 0;
-	background: url(''); /*фоновое изображение*/		
-	list-style: none;
-}
-.sc_menu li {
-	display: block;
-	float: left;	
-	padding: 0 4px;
-}
-.sc_menu a {
+
+
+.your-class a {
 	display: block;
 	text-decoration: none;
 }
-.sc_menu span {
-	display: block;
-	margin-top: 3px;
-	
-	text-align: center;
-	font-size: 12px;	
-	color: #000000;
-}
 
-.sc_menu a:hover span {
-	display: block;
-	color: #0000ff;
-	cursor: default;	/*параметры курсора*/
-}
-.sc_menu img {
-	border: 3px #fff solid;	
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-}
-.sc_menu a:hover img {
+
+.your-class a:hover img {
+    
 	filter:alpha(opacity=50);	
 	opacity: 0.5;
 	cursor: default;	/*параметры курсора*/	
@@ -385,19 +360,7 @@ ul.sc_menu {
 	display: block;
 	text-decoration: none;
 }
-.sc_menu2 span {
-//	display: block;
-//	margin-top: 0px;
-	
-	text-align: center;
-	font-size: 12px;	
-	color: #000000;
-}
 
-.sc_menu2 a:hover span {
-//	display: block;
-	color: #0000ff;
-}
 .sc_menu2 img {
 	border: 3px #fff solid;	
     -webkit-border-radius: 3px;
@@ -407,4 +370,39 @@ ul.sc_menu {
 	border: 3px #ebebeb solid;	
 	filter:alpha(opacity=50);	
 	opacity: 0.5;
+}
+li{
+    list-style-type:none;
+}
+.your-class{
+    padding:0;
+    margin:0;
+}
+/* the slides */
+.slick-slide {
+    margin: 0 10px;
+}
+/* the parent */
+.slick-list {
+    margin: 0 -10px;
+}
+#prevv{
+ 
+    transform: rotate(90deg);
+}
+#next{
+    transform: rotate(270deg);
+}
+.main_step-by-step__button-prev{
+   
+   position: relative;
+   top: 50%;
+   transform: translate(-50%, -50%);
+    float: left;
+}
+.main_step-by-step__button-next{
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+     float: left;
 }
