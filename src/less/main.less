@@ -1,11 +1,17 @@
 @import 'media';
 
 // Код для примера
-
-body{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
+  }
+
+  html,
+body,
+.wrapper {
+  height: 100%;
 }
+
 .change-color{
     color: rgb(240, 63, 63);
 }
@@ -96,29 +102,46 @@ height: 80px;
     margin-right: auto;
         }
         &__item ul{
+           
+        
             background: rgb(32,32,32);
            
             padding: 0; margin: 0;
         }
         &__item li{
-           float:left;
-           width: 11%;
-           list-style-type: none;
-        }
-        &__item li :hover{
-            background: black;
-        }
 
-        &__item a{
-            height: 50px;
-            display: block;
-           text-decoration: none;
-        
-           font-size: 14px;
-            text-align: center;
-            color:white;
- line-height: 50px;
+            float:left;
+ 
+            width: 11%;
+ 
+            list-style-type: none;
+ 
          }
+ 
+         &__item li :hover{
+ 
+             background: black;
+ 
+         }
+ 
+ 
+ 
+         &__item a{
+ 
+             height: 50px;
+ 
+             display: block;
+ 
+            text-decoration: none;
+            font-size: 14px;
+ 
+             text-align: center;
+ 
+             color:white;
+ 
+  line-height: 50px;
+ 
+          }
     }
 }
 .navigation{
@@ -136,8 +159,13 @@ height: 80px;
    
 }
 .main{
+    box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 90px;
+  height: 1700px;
+
+
     
-    height: 1700px;
    
 &_video{
     width: 80%;
@@ -251,16 +279,17 @@ hr{
    background: rgb(32,32,32);
    height: 50px;
    width: 100%;
-   
+   margin-top: -50px;
+  
    &_left{
     float: left;
     
-    height: 50px;
+    height: 60px;
 width: 33%;
 &__text{
     
     font-size: 10px;
-    height: 50px;
+    height: 60px;
     color:gainsboro;
    padding-left: 20px;
    display: table-cell;
@@ -269,11 +298,11 @@ width: 33%;
    }
    &_center{
     float: left;
-       height: 50px;
+       height: 60px;
        width: 33%;
 &_item{
     margin: 0 auto;
-    height: 50px;
+    height: 60px;
     width: 60%;
     &__facebook{
         fill: #f8faf1;
@@ -408,14 +437,7 @@ text-align: right;
   input::placeholder {
     color: #fff;
   }
-  div.sc_menu {
-	position: relative;
-	height: 200x; /*высота блока*/
-	width: 90%;  /* ширина блока*/
-	
-	margin-left: 50px;
-	margin-right: 50px;
-}
+  
 
 
 .your-class a {

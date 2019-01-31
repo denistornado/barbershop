@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="jquery.fancybox.min.css">
- <script src="jquery.fancybox.min.js"></script>
+ 
 
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="jquery.min.js"></script>
+   
    
 </head>
 <body>
@@ -21,15 +21,51 @@
 <!-- Код для примера -->
 
 <% const menuItems = [
-    {title: 'HairCare', link: '#'},
-    {title: 'Color', link: '#'},
-    {title: 'Styling', link: '#'}
+    {title: 'HAIRCARE', link: '#'},
+    {title: 'COLOR', link: '#'},
+    {title: 'STYLING', link: '#'},
+    {title: 'TEXTURE', link: '#'},
+    {title: 'GET INSPIRED', link: '#'},
+    {title: 'SOCIAL', link: '#'},
+    {title: 'NEWS', link: '#'},
+    {title: 'ABOUT', link: '#'},
+    {title: 'PROFESSIONAL', link: '#'}
     /* ... */
+]; %>
+
+<% const nearSalon = [
+    {title: 'Plush Salon 92101'},
+
+]; %>
+<% const step = [
+    {href: 'z8M0Fa1JVco', img:'z8M0Fa1JVco'},
+    {href: 'Wi2KcdoCuo4', img:'Wi2KcdoCuo4'},
+    {href: '8H6dYUgQKB8', img:'8H6dYUgQKB8'},
+    {href: 'PZjGrmHdFME', img:'PZjGrmHdFME'},
+    {href: '_wLGr24VeoI', img:'_wLGr24VeoI'},
+    {href: 'DG4FAU5qmMY', img:'DG4FAU5qmMY'},
+    
+]; %>
+<% const education = [
+    {href: 'RmNWNLXmswk', img:'RmNWNLXmswk'},
+    {href: '-tztXOz8Vc0', img:'-tztXOz8Vc0'},
+    {href: 'kUfIVtyydgQ', img:'kUfIVtyydgQ'},
+    {href: 'kUfIVtyydgQ', img:'kUfIVtyydgQ'},
+   
+    
+]; %>
+<% const inspiration = [
+    {href: 'VmmwwzR536g', img:'VmmwwzR536g'},
+    {href: 'vz0k8O-Ef9Y', img:'vz0k8O-Ef9Y'},
+    {href: '6oPBFnsqJW8', img:'6oPBFnsqJW8'},
+    {href: '6oPBFnsqJW8', img:'6oPBFnsqJW8'},
+   
+    
 ]; %>
 <div id="container">
 <header class="header">
     <div class="header_top">
-<div class="header_top_left"> <div class="header_top_left__text"> <span>Nearliest salon</span>  <img src="img/ico_dropdown.svg" height="20px" width="20px"  alt=""><br><span>Plush Salon 92101</span></div>
+<div class="header_top_left"> <div class="header_top_left__text"> <span>Nearliest salon</span>  <img src="img/ico_dropdown.svg" height="15px" width="15px"  alt=""><br><span id="near-salon"><% nearSalon.forEach((salon) => { %>  <%= salon.title %>   <% }) %></span></div>
 </div>
 <div class="header_top_center">
     <div class="header_top_center__text"><img src="img/logo.svg" height="30px" width="400px" alt=""></div>
@@ -50,24 +86,27 @@
 
     </div>
   
+
+
+
+
+   
     <div class="header_bottom">
        <div class="header_bottom__item">
         <ul >
-           
-            <li><a href="#">HAIRCARE</a></li>
-            <li><a href="#">COLOR</a></li>
-            <li><a href="#">STYLING</a></li>
-            <li><a href="#">TEXTURE</a></li>
-            <li><a href="#">GET INSIPED</a></li>
-            <li><a href="#">SOCIAL</a></li>
-            <li><a href="#">NEWS</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">PROFESSIONAL</a></li>
+                <% menuItems.forEach((item) => { %>
+
+                    <li class="menu__item"><a class="menu__link" href="<%= item.link; %>"><%= item.title %></a></li>
+        
+                    <% }) %>
+         
           </ul>
        </div>
     </div> 
    
 </header>
+
+
 <div class="navigation">
     <ul class="navigation__ul">
         <li class="navigation__li">HOME</li>
@@ -119,11 +158,13 @@
                                 </svg></div></div>
                             <div class="main_step-by-step_content_gallery">
                                     <div class="your-class">
-                                            <div>  <li><a class="zoom" href="http://www.youtube.com/embed/z8M0Fa1JVco?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/z8M0Fa1JVco/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                            <div><li><a class="zoom" href="http://www.youtube.com/embed/Wi2KcdoCuo4?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/Wi2KcdoCuo4/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                            <div> <li><a class="zoom" href="http://www.youtube.com/embed/8H6dYUgQKB8?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/8H6dYUgQKB8/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                            <div> <li><a class="zoom" href="http://www.youtube.com/embed/_wLGr24VeoI?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/_wLGr24VeoI/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                            <div>       <li><a class="zoom" href="http://www.youtube.com/embed/DG4FAU5qmMY?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/DG4FAU5qmMY/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
+                                            <% step.forEach((video) => { %>                          
+            <div>                            
+<a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= video.href %>?" width=800; height=600;><img src="https://img.youtube.com/vi/<%= video.img %>/mqdefault.jpg" width="100%" height="200"></a>
+</div>  
+<% }) %>
+                                        
+                            
                                           
                                           </div>
                             </div>
@@ -187,11 +228,11 @@
                         </svg></div></div>
                     <div class="main_craft-education_content_gallery">
                             <div class="your-class2">
-                                    <div>  <li><a class="zoom" href="http://www.youtube.com/embed/z8M0Fa1JVco?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/z8M0Fa1JVco/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                    <div><li><a class="zoom" href="http://www.youtube.com/embed/Wi2KcdoCuo4?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/Wi2KcdoCuo4/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                    <div> <li><a class="zoom" href="http://www.youtube.com/embed/8H6dYUgQKB8?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/8H6dYUgQKB8/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                    <div> <li><a class="zoom" href="http://www.youtube.com/embed/_wLGr24VeoI?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/_wLGr24VeoI/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                    <div>       <li><a class="zoom" href="http://www.youtube.com/embed/DG4FAU5qmMY?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/DG4FAU5qmMY/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
+                                    <% education.forEach((videoEducation) => { %>                          
+                                        <div>                            
+                            <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= videoEducation.href %>?" width=800; height=600;><img src="https://img.youtube.com/vi/<%= videoEducation.img %>/mqdefault.jpg" width="100%" height="200"></a>
+                            </div>  
+                            <% }) %>
                                   
                                   </div>
                     </div>
@@ -255,11 +296,11 @@
                         </svg></div></div>
                     <div class="main_inspiration_content_gallery">
                             <div class="your-class3">
-                                    <div>  <li><a class="zoom" href="http://www.youtube.com/embed/z8M0Fa1JVco?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/z8M0Fa1JVco/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                    <div><li><a class="zoom" href="http://www.youtube.com/embed/Wi2KcdoCuo4?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/Wi2KcdoCuo4/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                    <div> <li><a class="zoom" href="http://www.youtube.com/embed/8H6dYUgQKB8?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/8H6dYUgQKB8/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                    <div> <li><a class="zoom" href="http://www.youtube.com/embed/_wLGr24VeoI?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/_wLGr24VeoI/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
-                                    <div>       <li><a class="zoom" href="http://www.youtube.com/embed/DG4FAU5qmMY?autoplay=1 width=300; height=200; iframe=true;"><img class="thumbs" src="https://img.youtube.com/vi/DG4FAU5qmMY/mqdefault.jpg" width="100%" height="200" alt=" "/></a></li></div>
+                                    <% inspiration.forEach((videoInspiration) => { %>                          
+                                        <div>                            
+                            <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= videoInspiration.href %>?" width=800; height=600;><img src="https://img.youtube.com/vi/<%= videoInspiration.img %>/mqdefault.jpg" width="100%" height="200"></a>
+                            </div>  
+                            <% }) %>
                                   
                                   </div>
                     </div>
@@ -381,11 +422,11 @@
                     <svg  width="50" height="50" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 180 100" style="enable-background:new 0 0 0 0;" xml:space="preserve">
                    
-                    <path class="st0" d="M65.2,55.4c0-5.9-4.8-10.6-10.6-10.6c-5.9,0-10.6,4.8-10.6,10.6c0,5.9,4.8,10.6,10.6,10.6
+                    <path class="st" d="M65.2,55.4c0-5.9-4.8-10.6-10.6-10.6c-5.9,0-10.6,4.8-10.6,10.6c0,5.9,4.8,10.6,10.6,10.6
                         C60.4,66.1,65.2,61.3,65.2,55.4z"/>
-                    <path class="st0" d="M81,0H27C12.1,0,0,12.1,0,27v7.5h39.7c4.2-3,9.3-4.8,14.8-4.8c5.5,0,10.6,1.8,14.8,4.8h20.1H108V27
+                    <path class="st" d="M81,0H27C12.1,0,0,12.1,0,27v7.5h39.7c4.2-3,9.3-4.8,14.8-4.8c5.5,0,10.6,1.8,14.8,4.8h20.1H108V27
                         C108,12.1,95.9,0,81,0z M92,25.7c0,1.6-1.3,3-3,3h-9.3c-1.7,0-3-1.4-3-3v-9.3c0-1.6,1.3-3,3-3H89c1.7,0,3,1.4,3,3V25.7z"/>
-                    <path class="st0" d="M80.2,55.4c0,14.1-11.5,25.6-25.6,25.6S28.9,69.6,28.9,55.4c0-3.9,0.9-7.6,2.4-10.9H0v37c0,14.9,12.1,27,27,27
+                    <path class="st" d="M80.2,55.4c0,14.1-11.5,25.6-25.6,25.6S28.9,69.6,28.9,55.4c0-3.9,0.9-7.6,2.4-10.9H0v37c0,14.9,12.1,27,27,27
                         h54c14.9,0,27-12.1,27-27v-37H77.8C79.3,47.8,80.2,51.5,80.2,55.4z"/>
                     <g>
                     </g>
