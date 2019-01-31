@@ -133,41 +133,112 @@ height: 80px;
       padding: 2px;
         list-style-type: none;
     }
-    &__a{
    
-    }
 }
 .main{
     
-    height: 1600px;
+    height: 1700px;
+   
+&_video{
     width: 80%;
     margin-left: auto;
 margin-right: auto;
 &_discription{
     font-size: 30px;
 }
+}
+
 &_step-by-step{
     margin-top: 60px;
     height: 220px;
-&__gallery{
-    height: 220px;
-   
+    &__title{
+        width: 80%;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    &_content{
+        height: 220px;
+        width: 100%;
+        &_prev{
+            width: 10%;
+            height: 200px;
+        float: left;
+        
+        }
+        &_gallery{
+            width: 80%;
+            height: 200px;
+        float: left;
+    
+        }
+&_next{   width: 10%;
+height: 200px;
+float: left;
 }
+
+    }
 }
 &_craft-education{
-    height: 200px;
-    &__gallery{
-        height: 150px;
-        background: wheat;
+    margin-top: 80px;
+    height: 220px;
+
+    &__title{
+        width: 80%;
+        margin-left:auto;
+        margin-right: auto;
+   
+}
+&_content{
+    height: 220px;
+    width: 100%;
+    &_prev{
+        width: 10%;
+        height: 200px;
+    float: left;
+    
     }
+    &_gallery{
+        width: 80%;
+        height: 200px;
+    float: left;
+
+    }
+&_next{   width: 10%;
+height: 200px;
+float: left;
+}
+}
 }
 &_inspiration{
-    margin-top: 60px;
+    margin-top: 80px;
     height: 200px;
-    &__gallery{
-        height: 150px;
-        background: wheat;
+    &__title{
+        width: 80%;
+        margin-left:auto;
+        margin-right: auto;
+   
+}
+&_content{
+    height: 220px;
+    width: 100%;
+    &_prev{
+        width: 10%;
+        height: 200px;
+    float: left;
+    
     }
+    &_gallery{
+        width: 80%;
+        height: 200px;
+    float: left;
+
+    }
+&_next{   
+    width: 10%;
+height: 200px;
+float: left;
+}
+}
 }
 }
 hr{
@@ -175,10 +246,12 @@ hr{
     
 }
 .footer{
+    padding: 0;
+    margin: 0;
    background: rgb(32,32,32);
    height: 50px;
    width: 100%;
-   display:table;
+   
    &_left{
     float: left;
     
@@ -245,17 +318,19 @@ width: 33%;
    }
    &_right{
      float:right;
- 
+ width:33%;
     height: 50px;
 
 text-align: right;
 &__text{
-    
+    float:right;
     font-size: 10px;
-    height: 50px;
+    
         color: white;
-      display:table-cell;
-    vertical-align: middle;
+        position: relative;
+        top: 25%;
+        margin-left: auto;
+        margin-right: auto;
       
        padding-right: 20px;
 }
@@ -356,21 +431,32 @@ text-align: right;
 	cursor: default;	/*параметры курсора*/	
 }
 
-.sc_menu2 a {
+.your-class2 a {
 	display: block;
 	text-decoration: none;
 }
 
-.sc_menu2 img {
-	border: 3px #fff solid;	
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-}
-.sc_menu2 a:hover img {
-	border: 3px #ebebeb solid;	
+
+.your-class2 a:hover img {
+    
 	filter:alpha(opacity=50);	
 	opacity: 0.5;
+	cursor: default;	/*параметры курсора*/	
 }
+.your-class3 a {
+	display: block;
+	text-decoration: none;
+}
+
+
+.your-class3 a:hover img {
+    
+	filter:alpha(opacity=50);	
+	opacity: 0.5;
+	cursor: default;	/*параметры курсора*/	
+}
+
+
 li{
     list-style-type:none;
 }
@@ -386,23 +472,70 @@ li{
 .slick-list {
     margin: 0 -10px;
 }
-#prevv{
+.prev{
  
     transform: rotate(90deg);
+  
 }
-#next{
-    transform: rotate(270deg);
-}
-.main_step-by-step__button-prev{
+.next{
    
+    transform: rotate(270deg);
+  
+   
+}
+
+.main_craft-education_prev__button{
+    height: 20px;
+    width: 20px;
    position: relative;
    top: 50%;
-   transform: translate(-50%, -50%);
-    float: left;
+   margin-left: auto;
+   margin-right: auto;
+    
 }
-.main_step-by-step__button-next{
-    position: relative;
-    top: 50%;
-    transform: translate(-50%, -50%);
-     float: left;
+
+.main_craft-education_next__button{
+    height: 20px;
+    width: 20px;
+   position: relative;
+   top: 50%;
+   margin-left: auto;
+   margin-right: auto;
+    
 }
+
+.main_step-by-step_next__button{
+height: 20px;
+width: 20px;
+     position: relative;
+   top: 50%;
+   margin-left: auto;
+   margin-right: auto;
+    
+}
+.main_step-by-step_prev__button{
+    height: 20px;
+width: 20px;
+     position: relative;
+   top: 50%;
+   margin-left: auto;
+   margin-right: auto;
+}
+.main_inspiration_next__button{
+    height: 20px;
+    width: 20px;
+         position: relative;
+       top: 50%;
+       margin-left: auto;
+       margin-right: auto;
+        
+    }
+    .main_inspiration_prev__button{
+        height: 20px;
+    width: 20px;
+         position: relative;
+       top: 50%;
+       margin-left: auto;
+       margin-right: auto;
+    }
+
