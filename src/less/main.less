@@ -1,14 +1,16 @@
 @import 'media';
 
 // Код для примера
-* {
-    margin: 0;
-    padding: 0;
-  }
 
+
+  img{
+      vertical-align: middle;
+  }
   html,
   body {
     height: 100%;
+    margin: 0;
+    padding: 0;
   }
 
 .change-color{
@@ -58,32 +60,65 @@ height: 80px;
             float: left;
             height: 80px;
 width: 33%;
-&__search{
-    width: 100%;
-  display: inline-block;
-height: 80px;
- 
-  line-height: 80px;
- 
-   text-align: right;
-
+&__textbox{
+    float: left;
+    width: 70%;
+    height: 80px;;
 }
-&__box{
+&__wrap{
     position: relative;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 40px;
+    background: rgb(130, 117, 250);
+    line-height: 40px;
    
-  display: inline-block;
-height: 80px;
- display: none;
-  line-height: 80px;
- 
-
+    
+    
+    transition: all 0.5s ease;
+  }
+  &__wrap.active{
+    width: 200px;
   
+    transition: all 0.5s ease;
+  }
+  &__input{
+    border: 0;
+    background: transparent;
+    width: 0%;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #fff;
    
-  transition-delay: 0.5s;
-  
-   text-align: right;
- 
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  &__input.active{
+    width: 90%;
+    padding-left: 5px;
+    transition: all 0.5s 0.8s ease;
+  }
+  &__input::placeholder {
+    color: #fff;
+  }
+  &__search{
+    float: left;
+    width: 20%;
+    height: 80px;
+    
+    .fa{
+      position: relative;
+      top: 50%;
+     left: 75%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
 }
+
+
 
         }
     }
@@ -184,6 +219,14 @@ margin-right: auto;
             width: 10%;
             height: 200px;
         float: left;
+        &__button{
+            height: 20px;
+width: 20px;
+     position: relative;
+   top: 50%;
+   margin-left: auto;
+   margin-right: auto;
+        }
         
         }
         &_gallery{
@@ -195,6 +238,14 @@ margin-right: auto;
 &_next{   width: 10%;
 height: 200px;
 float: left;
+&__buttton{
+    height: 20px;
+width: 20px;
+     position: relative;
+   top: 50%;
+   margin-left: auto;
+   margin-right: auto;
+}
 }
 
     }
@@ -216,8 +267,15 @@ float: left;
         width: 10%;
         height: 200px;
     float: left;
-    
+    &__button{
+        height: 20px;
+    width: 20px;
+         position: relative;
+       top: 50%;
+       margin-left: auto;
+       margin-right: auto;
     }
+}
     &_gallery{
         width: 80%;
         height: 200px;
@@ -227,9 +285,18 @@ float: left;
 &_next{   width: 10%;
 height: 200px;
 float: left;
+&__button{
+    height: 20px;
+width: 20px;
+     position: relative;
+   top: 50%;
+   margin-left: auto;
+   margin-right: auto;
 }
 }
 }
+}
+
 &_inspiration{
     margin-top: 80px;
     height: 200px;
@@ -246,6 +313,14 @@ float: left;
         width: 10%;
         height: 200px;
     float: left;
+    &__button{
+        height: 20px;
+width: 20px;
+     position: relative;
+   top: 50%;
+   margin-left: auto;
+   margin-right: auto;
+    }
     
     }
     &_gallery{
@@ -258,10 +333,19 @@ float: left;
     width: 10%;
 height: 200px;
 float: left;
+&__button{
+    height: 20px;
+width: 20px;
+     position: relative;
+   top: 50%;
+   margin-left: auto;
+   margin-right: auto;
 }
 }
 }
 }
+}
+
 hr{
     color: gray;
     
@@ -366,72 +450,16 @@ text-align: right;
  
  
  
-  img{
-      vertical-align: middle;
-  }
-  .textbox{
-      float: left;
-      width: 70%;
-      height: 80px;;
-  }
-  .search{
-      float: left;
-      width: 20%;
-      height: 80px;
-      
-      .fa{
-        position: relative;
-        top: 50%;
-       left: 75%;
-        transform: translate(-50%, -50%);
-        cursor: pointer;
-      }
-  }
-  .wrap{
-    position: relative;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    width: 0px;
-    height: 40px;
-    background: rgb(130, 117, 250);
-    line-height: 40px;
-   
-    
-    
-    transition: all 0.5s ease;
-  }
   
-  .input{
-    border: 0;
-    background: transparent;
-    width: 0%;
-    outline: none;
-    font-family: sans-serif;
-    font-size: 16px;
-    color: #fff;
-   
-    transition: all 0.3s ease;
-    position: relative;
-  }
+  
+  
+  
   
  
   
-  .wrap.active{
-    width: 200px;
   
-    transition: all 0.5s ease;
-  }
   
-  .input.active{
-    width: 90%;
-    padding-left: 5px;
-    transition: all 0.5s 0.8s ease;
-  }
-  
-  input::placeholder {
-    color: #fff;
-  }
+ 
   
 
 
