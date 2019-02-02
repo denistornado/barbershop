@@ -2,8 +2,8 @@
 $(document).ready(function(){
   $('.your-class').slick({
     
-    prevArrow:$('.main_step-by-step_prev__button'),
-    nextArrow:$('.main_step-by-step_next__button'),
+    prevArrow:$('.content_step-by-step_gallery__button-prev'),
+    nextArrow:$('.content_step-by-step_gallery__button-next'),
     slidesToShow: 3,
     speed: 300,
     centerPadding:50,
@@ -11,25 +11,25 @@ $(document).ready(function(){
 
   $('.your-class2').slick({
     
-    prevArrow:$('.main_craft-education_prev__button'),
-    nextArrow:$('.main_craft-education_next__button'),
+    prevArrow:$('.content_craft-education_gallery__button-prev'),
+    nextArrow:$('.content_craft-education_gallery__button-next'),
     slidesToShow: 3,
     speed: 300,
     centerPadding:50,
   });
   $('.your-class3').slick({
     
-    prevArrow:$('.main_inspiration_prev__button'),
-    nextArrow:$('.main_inspiration_next__button'),
+    prevArrow:$('.content_inspiration_gallery__button-prev'),
+    nextArrow:$('.content_inspiration_gallery__button-next'),
     slidesToShow: 3,
     speed: 300,
     centerPadding:50,
   });
   $(".fa-search").click(function(){
 
-    $(".header_top_right__wrap, .header_top_right__input").toggleClass("active");
+    $(".header_top_search__wrap, .header_top_search__input").toggleClass("active");
 
-    $("header_top_right__input[type='text']").focus();
+    $("header_top_search__input[type='text']").focus();
 
   });
 
