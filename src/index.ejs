@@ -64,52 +64,53 @@
     
 ]; %>
     <div id="container">
-     
+
         <header class="header">
             <div class="header_top">
+                <div class="header_top__wrap">
+                    <form>
+                        <input type="text" class="header_top__input" placeholder="Find">
+                    </form>
+
+                </div>
                 <div class="header_top_adress">
-<div class="header_top_adress__mobile-navigation">
-                        <input type="checkbox" name="" id="choice">
-                        <label class="choice-container" for="choice">
-                            <span class="button-choice_1"></span>
-                            <span class="button-choice_2"></span> 
-                               <span class="button-choice_3"></span>
-                             
-                        </label>
-                        <ul class="hidden-menu">
-                                <% menuItems.forEach((item) => { %>
+                    <span>Nearliest salon</span> <img src="img/ico_dropdown.svg" height="15px" width="15px" alt=""><br><span
+                        id="near-salon">
+                        <% nearSalon.forEach((salon) => { %>
+                        <%= salon.title %>
+                        <% }) %></span> </div>
+                <div class="header_top_mobile-navigation">
+                    <input type="checkbox" name="" id="choice">
+                    <label class="choice-container" for="choice">
+                        <span class="button-choice_1"></span>
+                        <span class="button-choice_2"></span>
+                        <span class="button-choice_3"></span>
 
-                                    <li class="menu__item"><a class="menu__link" href="<%= item.link; %>">
-                                            <%= item.title %></a></li>
-            
-                                    <% }) %>
-            
-                        </ul>
-                    </div>
-                    <div class="header_top_adress__text"> <span>Nearliest salon</span> <img src="img/ico_dropdown.svg"
-                            height="15px" width="15px" alt=""><br><span id="near-salon">
-                            <% nearSalon.forEach((salon) => { %>
-                            <%= salon.title %>
-                            <% }) %></span></div>
-                </div>
-                <div class="header_top_logo">
-                    <div class="header_top_logo__item"><img src="img/logo.svg" height="30px" width="400px" alt=""></div>
-                </div>
-                <div class="header_top_search">
-                    <div class="header_top_search__textbox">
-                        <div class="header_top_search__wrap">
-                            <form>
-                                <input type="text" class="header_top_search__input" placeholder="Find">
-                            </form>
+                    </label>
+                    <ul class="hidden-menu">
+                        <% menuItems.forEach((item) => { %>
 
-                        </div>
-                    </div>
-                    <div class="header_top_search__icon">
-                        <img class="fa fa-search" src="img/ico_search.svg" height="20px" width="20px" alt="">
-                    </div>
+                        <li class="menu__item"><a class="menu__link" href="<%= item.link; %>">
+                                <%= item.title %></a></li>
+
+                        <% }) %>
+
+                    </ul>
                 </div>
+
+
+
+                <img class="header_top_logo" src="img/logo.svg" height="50px" width="400px" alt="">
+
+
+
+
+                <img class="fa fa-search" src="img/ico_search.svg" height="20px" width="20px" alt="">
 
             </div>
+
+
+
             <div class="header_bottom">
                 <div class="header_bottom__menu">
                     <ul>

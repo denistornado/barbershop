@@ -27,9 +27,9 @@ $(document).ready(function(){
   });
   $(".fa-search").click(function(){
 
-    $(".header_top_search__wrap, .header_top_search__input").toggleClass("active");
+    $(".header_top__wrap, .header_top__input").toggleClass("active");
 
-    $("header_top_search__input[type='text']").focus();
+    $("header_top__input[type='text']").focus();
 
   });
 

@@ -2,7 +2,13 @@
 
 // Код для примера
 
-
+.test
+{
+    position: relative;
+    height:30px;
+    width: 30px;
+    background: navy;
+}
   img{
       vertical-align: middle;
   }
@@ -29,107 +35,101 @@ position: static;
 
         background: rgb(105, 23, 206);
         height: 80px;
+
+        position: relative;
         &_adress{
-
-            position: relative;
-            float: left;
-            height: 80px;
-        width: 33%;
-
+            position: absolute;
+            font-size: 14px;
+            
+            top: 190%;
+           
+            transform: translate(0, -190%);  
+          
+            color: white;
+           padding-left: 20px;
+       
 @media @desktop {
-    position: relative;
-    float: left;
-    height: 80px;
-width: 33%;
+    position: absolute;
+    font-size: 14px;
+    
+    top: 50%;
+   
+    transform: translate(0, -50%);  
+  
+    color: white;
+   padding-left: 20px;
+
     
             }
-            &__text{
-                position: absolute;
-                    font-size: 14px;
-                    top: 130%;
-                    transform: translate(0, -50%);  
-                    color: white;
-                   padding-left: 20px;
-                @media @desktop {
-                 position: absolute;
-                    font-size: 14px;
-                    position: absolute;
-                    top: 50%;
-                   
-                    transform: translate(0, -50%);  
-                  
-                    color: white;
-                   padding-left: 20px;
-             
-                
-                }
-            }
-            &__content{
-                display: inline;
-                position: absolute;
-                top: 100%;
-
-            }
-            &__mobile-navigation{
-                position: relative;
-width: 100%;
-height: 80px;
-                @media @desktop {
-                    display: none;
-                }
-            }
         }
+&_mobile-navigation{
 
+    @media @desktop{
+  display: none;
+    }
+
+}
 
         &_logo{
-            float: left;
-            height: 80px;
-       width: 60%;
+            position: absolute;
+     
+            top: 50%;
+       left: 50%;
+            transform: translate(-50%,-50%);
+
        @media @desktop {
-           
-            height: 80px;
-width: 33%;
+        position: absolute;
+     
+        top: 50%;
+   left: 50%;
+        transform: translate(-50%,-50%);
        }
-&__item{
-    
-    font-size: 28px;
-height: 80px;
-    color: white;
-  line-height: 80px;
-  letter-spacing: 20px;
-   text-align: center;
-}
 
         }
-        &_search{
-        
-       @media @desktop{
-            float: left;
-            height: 80px;
+    
 
-width: 33%;
-       }
-&__textbox{
-    float: left;
-    width: 70%;
-    height: 80px;;
-}
 &__wrap{
-    position: relative;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    width: 0px;
-    height: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+   position: absolute;
+top: 160%;
+right: 2%;
+transform: translate(-15%,-160%);
+    width: 0;
+   
     background: rgb(130, 117, 250);
-    line-height: 40px;
+
+   
+    
+    
+    transition: all 0.5s ease;
+    @media @desktop{
+        margin-left: 5px;
+        margin-right: 5px;
+        
+       position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translate(-15%,-50%);
+        width: 0;
+       
+        background: rgb(130, 117, 250);
+    
+       
+        
+        
+        transition: all 0.5s ease;
+    }
+    
+
    
     
     
     transition: all 0.5s ease;
   }
   &__wrap.active{
-    width: 200px;
+    width: 150px;
   
     transition: all 0.5s ease;
   }
@@ -153,39 +153,51 @@ width: 33%;
   &__input::placeholder {
     color: #fff;
   }
-  &__icon{
-     
-
-
+  
+  
+  
     
 
 
 
-         float: left;
-    width: 20%;
-    height: 80px;
+    
     
     .fa{
-      position: relative;
-      top: 50%;
-     left: 75%;
-      transform: translate(-50%, -50%);
+        margin-left: 10px;
+        margin-right: 5px;
+          height: 20px;
+          width: 20px;
+         position: absolute;
+         right: 2%;
+         top: 160%;
+       transform: translate(-5%,-160%);
+        cursor: pointer;
+        @media @desktop{
+      margin-left: 10px;
+      margin-right: 5px;
+        height: 20px;
+        width: 20px;
+       position: absolute;
+       right: 2%;
+       top: 50%;
+       transform: translate(-5%,-50%);
       cursor: pointer;
-    }
-}
-
-
-
         }
+    }
+
+
+
+
+        
     }
     &_bottom{
         background: rgb(32,32,32);
         height: 50px;
 
         &__menu{
-            @media phone {
+          
                 display:none;
-            }
+           
            
        
         @media @desktop{
@@ -197,20 +209,25 @@ width: 33%;
         }
         }
         &__menu ul{
-           
+         
+                display:none;
+                @media @desktop{
         
             background: rgb(32,32,32);
            
             padding: 0; margin: 0;
+                }
         }
         &__menu li{
-
+          
+                display:none;
+                @media @desktop{  
             float:left;
  
             width: 11%;
  
             list-style-type: none;
- 
+                }
          }
  
          &__menu li :hover{
@@ -222,7 +239,9 @@ width: 33%;
  
  
          &__menu a{
- 
+            
+                display:none;
+             @media @desktop{
              height: 50px;
  
              display: block;
@@ -235,7 +254,7 @@ width: 33%;
              color:white;
  
   line-height: 50px;
- 
+             }
           }
     }
 }
