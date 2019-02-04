@@ -23,8 +23,8 @@
 
 }
 button{
-    width: 120px;
-    height: 40px;
+    width: 180px;
+    height: 50px;
     border: black solid 1px;
     background: rgb(32,32,32);
     color: white;
@@ -583,11 +583,11 @@ hr{
     
 }
 .footer{
-height: 300px;
+height: 350px;
 padding: 0;
 margin: 0;
 background: rgb(32,32,32);
-
+margin-top: 80px;
 width: 100%;
     @media  @desktop {
         padding: 0;
@@ -595,18 +595,107 @@ width: 100%;
        background: rgb(32,32,32);
        height: 60px;
        width: 100%;
-   margin-top: 40px;
+   margin-top: 80px;
         
     }
    
     
+  &_private-terms-mobile{
+      width: 80%;
+    font-size: 14px;
+    height: 80px;
+    color:gainsboro;
+margin-left: 10%;
+
+    @media @desktop {
+        display: none;
+    }
+&__text{
+    position: relative;
+    top: 50%;
+    color:gainsboro;
+ transform: translate(0,-50%);
+ 
+}
+  }
+  &_social-mobile{
+    padding-top: 40px;
+    height: 80px;
+    width: 80%;
+    margin-left: 10%;
+    @media @desktop {
+        display: none;
   
+    }
+&__item{
+
+}
+    &__facebook{
+        fill: #f8faf1;
+        float: left;
+        height: 50px;
+        width: 15%;
+       
+    }
+    &__twitter{
+        fill: #f8faf1;
+        float: left;
+        height: 50px;
+        width: 15%;
+
+    }
+    &__pinterest{
+        fill: #f8faf1;
+        float: left;
+        height: 50px;
+        width: 15%;
+
+    }
+    &__youtube{
+        fill: #f8faf1;
+        float: left;
+        height: 50px;
+        width: 15%;
+
+    }
+    &__instagram{
+        fill: #f8faf1;
+        float: left;
+        height: 50px;
+        width: 15%;
+
+    }
+
+}
+&_location-mobile{
+    width: 80%;
+    font-size: 14px;
+    height: 80px;
+    color:gainsboro;
+margin-left: 10%;
+
+    @media @desktop {
+        display: none;
+    }
+&__text{
+    position: relative;
+    top: 50%;
+    color: white;
+ transform: translate(0,-50%);
+}
+   }
   
+
    &_private-terms{
-    float: left;
+       display: none;
+       @media @desktop {
+           display: block;
+        float: left;
     
-    height: 60px;
-width: 33%;
+        height: 60px;
+    width: 33%;
+       }
+  
 &__text{
     
     font-size: 10px;
@@ -618,9 +707,13 @@ width: 33%;
 }
    }
    &_social{
+    display: none;
+    @media @desktop {
+        display: block;
     float: left;
        height: 60px;
        width: 33%;
+    }
 &__item{
     margin: 0 auto;
     height: 60px;
@@ -668,18 +761,24 @@ width: 33%;
 
    
    &_location{
+    display: none;
+    @media @desktop {
+        display: block;
      float:right;
  width:33%;
-    height: 50px;
+    height: 60px;
 
 text-align: right;
+    }
 &__text{
     float:right;
     font-size: 10px;
     
         color: white;
         position: relative;
-        top: 50%;
+    top: 50%;
+   
+ transform: translate(0,-50%)
         margin-left: auto;
         margin-right: auto;
       

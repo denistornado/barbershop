@@ -53,7 +53,6 @@ const view = parseInt((getComputedStyle(document.querySelector(".content_step-by
 ).height)) ;
 
 if(view !== height_of_line){
- 
 document.getElementsByClassName('content_step-by-step_gallery-mobile__view')[0].style.height = height_of_line+'px'; 
 document.getElementById('load').textContent = "Hide";
 
