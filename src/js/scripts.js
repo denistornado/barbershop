@@ -32,11 +32,95 @@ $(document).ready(function(){
     $("header_top__input[type='text']").focus();
 
   });
-
+  
   
 
 });
 
+function handler1(){
+  
+  
+  const shift = parseInt((getComputedStyle(document.querySelector(".light")
+  ).height)) ;
+
+  const count_of_images=(document.querySelectorAll('.light').length);
+let height_of_line=count_of_images*shift;
+const start=shift*3;
+
+
+let first;
+const view = parseInt((getComputedStyle(document.querySelector(".content_step-by-step_gallery-mobile__view")
+).height)) ;
+
+if(view !== height_of_line){
+ 
+document.getElementsByClassName('content_step-by-step_gallery-mobile__view')[0].style.height = height_of_line+'px'; 
+document.getElementById('load').textContent = "Hide";
+
+}
+else{
+  
+  document.getElementsByClassName('content_step-by-step_gallery-mobile__view')[0].style.height = start+'px';
+  document.getElementById('load').textContent = "Load more";
+}
+
+  
+}
+load.addEventListener("click", handler1);
+function hand(){
+  
+  console.log("s");
+  const shift = parseInt((getComputedStyle(document.querySelector(".craft-education-light")
+  ).height)) ;
+
+  const count_of_images=(document.querySelectorAll('.craft-education-light').length);
+let height_of_line=count_of_images*shift;
+const start=shift*3;
+
+
+let first;
+const view = parseInt((getComputedStyle(document.querySelector(".content_craft-education_gallery-mobile__view")
+).height)) ;
+
+if(view !== height_of_line){
+ 
+document.getElementsByClassName('content_craft-education_gallery-mobile__view')[0].style.height = height_of_line+'px'; 
+}
+else{
+  
+  document.getElementsByClassName('content_craft-education_gallery-mobile__view')[0].style.height = start+'px';
+}
+
+}
+
+education_load.addEventListener("click", hand);
+function hand2(){
+  
+  console.log("s");
+  const shift = parseInt((getComputedStyle(document.querySelector(".inspiration-light")
+  ).height)) ;
+
+  const count_of_images=(document.querySelectorAll('.inspiration-light').length);
+let height_of_line=count_of_images*shift;
+const start=shift*3;
+
+
+let first;
+const view = parseInt((getComputedStyle(document.querySelector(".content_inspiration_gallery-mobile__view")
+).height)) ;
+
+if(view !== height_of_line){
+ 
+document.getElementsByClassName('content_inspiration_gallery-mobile__view')[0].style.height = height_of_line+'px'; 
+}
+else{
+  
+  document.getElementsByClassName('content_inspiration_gallery-mobile__view')[0].style.height = start+'px';
+}
+
+}
+
+inspiration_load.addEventListener("click",hand2)
 
   
 

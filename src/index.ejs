@@ -159,6 +159,21 @@
                     <h2>STEP <span class="change-color">BY</span> STEP</h2>
 
                 </div>
+                <div class="content_step-by-step_gallery-mobile" >
+                    <div class="content_step-by-step_gallery-mobile__view">
+                        <div class="content_step-by-step_gallery-mobile__line">
+                    <% step.forEach((video) => { %>
+                        <div class="light">
+                            <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= video.href %>?" width=800;
+                                height=600;><img src="https://img.youtube.com/vi/<%= video.img %>/maxresdefault.jpg"
+                                    width="100%" height="280"></a>
+                        </div>
+                    
+                        <% }) %>
+                    </div>
+                    </div>
+                     <button id="load">LOAD MORE</button>
+                </div>
                 <div class="content_step-by-step_gallery">
 
                     <div class="content_step-by-step_gallery__prev">
@@ -198,7 +213,7 @@
                             <% step.forEach((video) => { %>
                             <div>
                                 <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= video.href %>?" width=800;
-                                    height=600;><img src="https://img.youtube.com/vi/<%= video.img %>/mqdefault.jpg"
+                                    height=600;><img src="https://img.youtube.com/vi/<%= video.img %>/maxresdefault.jpg"
                                         width="100%" height="200"></a>
                             </div>
                             <% }) %>
@@ -246,6 +261,21 @@
                 <div class="content_craft-education__title">
                     <h2>CRAFT <span class="change-color">EDUCATION</span> </h2>
 
+                </div>
+                <div class="content_craft-education_gallery-mobile" >
+                    <div class="content_craft-education_gallery-mobile__view">
+                        <div class="content_step-by-craft-education-mobile__line">
+                            <% education.forEach((videoEducation) => { %>
+                        <div class="craft-education-light">
+                            <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= videoEducation.href %>?" width=800;
+                                height=600;><img src="https://img.youtube.com/vi/<%= videoEducation.img %>/maxresdefault.jpg"
+                                    width="100%" height="280"></a>
+                        </div>
+                    
+                        <% }) %>
+                    </div>
+                    </div>
+                     <button id="education_load">LOAD MORE</button>
                 </div>
                 <div class="content_craft-education_gallery">
 
@@ -332,6 +362,21 @@
             <div class="content_inspiration">
                 <div class="content_inspiration__title">
                     <h2><span>INSPIRATION</span></h2>
+                </div>
+                <div class="content_inspiration_gallery-mobile" >
+                    <div class="content_inspiration_gallery-mobile__view">
+                        <div class="content_inspiration-education-mobile__line">
+                            <% inspiration.forEach((videoInspiration) => { %>
+                        <div class="inspiration-light">
+                            <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= videoInspiration.href %>?" width=800;
+                                height=600;><img src="https://img.youtube.com/vi/<%= videoInspiration.img %>/maxresdefault.jpg"
+                                    width="100%" height="280"></a>
+                        </div>
+                    
+                        <% }) %>
+                    </div>
+                    </div>
+                     <button id="inspiration_load">LOAD MORE</button>
                 </div>
                 <div class="content_inspiration_gallery">
 
