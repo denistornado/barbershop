@@ -14,7 +14,6 @@
 
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 
-
 </head>
 
 <body>
@@ -56,13 +55,50 @@
     
 ]; %>
     <% const inspiration = [
-    {href: 'VmmwwzR536g', img:'VmmwwzR536g'},
+    {href: 'PZjGrmHdFME', img:'VmmwwzR536g'},
     {href: 'vz0k8O-Ef9Y', img:'vz0k8O-Ef9Y'},
     {href: '6oPBFnsqJW8', img:'6oPBFnsqJW8'},
     {href: '6oPBFnsqJW8', img:'6oPBFnsqJW8'},
    
     
 ]; %>
+%>
+<% const test = [
+[
+    {href: 'PZjGrmHdFME',class:'inspiration'},
+    {href: 'vz0k8O-Ef9Y',class:'inspiration'},
+    {href: '6oPBFnsqJW8',class:'inspiration'},
+    {href: '6oPBFnsqJW8',class:'inspiration'},
+    {href: '6oPBFnsqJW8',class:'inspiration'},
+    {href: '6oPBFnsqJW8',class:'inspiration'},
+    
+],
+[
+  
+  
+{href: 'RmNWNLXmswk',class:'craft-education'},
+{href: '-tztXOz8Vc0',class:'craft-education'},
+{href: 'kUfIVtyydgQ',class:'craft-education'},
+{href: 'kUfIVtyydgQ',class:'craft-education'},
+{href: 'kUfIVtyydgQ',class:'craft-education'},
+
+],
+
+[
+    {href: 'z8M0Fa1JVco',class:'step-by-step'},
+    {href: 'Wi2KcdoCuo4',class:'step-by-step'},
+    {href: '8H6dYUgQKB8',class:'step-by-step'},
+    {href: 'PZjGrmHdFME',class:'step-by-step'},
+    {href: '_wLGr24VeoI',class:'step-by-step'},
+    {href: 'DG4FAU5qmMY',class:'step-by-step'},
+    
+],
+
+
+
+]; %>
+
+
     <div id="container">
 
         <header class="header">
@@ -99,8 +135,6 @@
 
                     </ul>
                 </div>
-
-
 
                
                 <img class="header_top_logo" src="img/logo.svg" height="80px" width="300px" alt="">
@@ -142,9 +176,12 @@
                 <div class="content_title">
                     <h1>VIDEOS</h1>
                 </div>
-                <a data-fancybox="gallery" href="https://www.youtube.com/embed/8H6dYUgQKB8?start=4" width=800; height=600;><img
+                <div class=play-main-container> 
+                       
+                <a data-fancybox="gallery" href="https://www.youtube.com/embed/8H6dYUgQKB8?start=4" width=800; height=600;>
+                    <img  class="play-main"src="img/play5.png" alt=""> <img 
                         src="https://img.youtube.com/vi/8H6dYUgQKB8/maxresdefault.jpg" width="100%" height="450"></a>
-
+                    </div>
                 <p class="content_main-video_discription"> <strong> ipsum dolor sit amet consectetur adipisicing elit.
                         Fugiat debitis praesentium quos ducimus fugit. Voluptatibus quia sequi eius dolore quae,
                         asperiores consectetur accusantium suscipit adipisci. Provident delectus animi sequi.
@@ -152,32 +189,22 @@
                 <hr color="gray">
             </div>
 
+            <% for(var i=0;i<test.length;i++){%> 
+            <div class="content_<%-test[i][0].class%> content_block">
+                <div class="content_<%-test[i][0].class%>__title content_block__title"  >
 
-            <div class="content_step-by-step">
-                <div class="content_step-by-step__title">
-
-                    <h2>STEP <span class="change-color">BY</span> STEP</h2>
-
+                   
+                     
+                    <h2>   <%-test[i][0].class%></h2>
+               
                 </div>
-                <div class="content_step-by-step_gallery-mobile" >
-                    <div class="content_step-by-step_gallery-mobile__view">
-                        <div class="content_step-by-step_gallery-mobile__line">
-                    <% step.forEach((video) => { %>
-                        <div class="light">
-                            <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= video.href %>?" width=800;
-                                height=600;><img src="https://img.youtube.com/vi/<%= video.img %>/maxresdefault.jpg"
-                                    width="100%" height="280"></a>
-                        </div>
-                    
-                        <% }) %>
-                    </div>
-                    </div>
-                     <button id="load">LOAD MORE</button>
-                </div>
-                <div class="content_step-by-step_gallery">
+              
 
-                    <div class="content_step-by-step_gallery__prev">
-                        <div class="content_step-by-step_gallery__button-prev">
+                     
+                <div class="content_<%-test[i][0].class%>_gallery content_block_gallery">
+
+                    <div class="content_<%-test[i][0].class%>_gallery__prev content_block_gallery__prev" >
+                        <div class="content_<%-test[i][0].class%>_gallery__button-prev content_block_gallery__button-prev" >
                             <?xml version="1.0" encoding="utf-8"?>
                             <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                             <svg version="1.1" class="prev" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
@@ -208,22 +235,25 @@
                                 </g>
                             </svg></div>
                     </div>
-                    <div class="content_step-by-step_gallery__slider">
-                        <div class="your-class">
-                            <% step.forEach((video) => { %>
+                    <div class="content_<%-test[i][0].class%>_gallery__slider content_block_gallery__slider">
+                       
+                        <div class="<%-test[i][0].class%>">
+                            <% for(var j=0;j<test[i].length;j++){ %> 
                             <div>
-                                <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= video.href %>?" width=800;
-                                    height=600;><img src="https://img.youtube.com/vi/<%= video.img %>/maxresdefault.jpg"
+                                <a data-fancybox="gallery" href="https://youtu.be/<%= test[i][j].href %>" width=800;
+                                    height=600;><img src="https://img.youtube.com/vi/<%= test[i][j].href %>/maxresdefault.jpg"
                                         width="100%" height="200"></a>
                             </div>
-                            <% }) %>
+                            <% } %>
 
 
 
                         </div>
+                     
                     </div>
-                    <div class="content_step-by-step_gallery__next">
-                        <div class="content_step-by-step_gallery__button-next">
+                    <div class="content_<%-test[i][0].class%>_gallery__next content_block_gallery__next" >
+                        <div class="content_<%-test[i][0].class%>_gallery__button-next content_block_gallery__button-next"
+                        >
                             <?xml version="1.0" encoding="utf-8"?>
                             <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                             <svg version="1.1" class="next" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
@@ -254,212 +284,33 @@
                                 </g>
                             </svg></div>
                     </div>
-
+                   
+               
+                   
                 </div>
-            </div>
-            <div class="content_craft-education">
-                <div class="content_craft-education__title">
-                    <h2>CRAFT <span class="change-color">EDUCATION</span> </h2>
-
-                </div>
-                <div class="content_craft-education_gallery-mobile" >
-                    <div class="content_craft-education_gallery-mobile__view">
-                        <div class="content_step-by-craft-education-mobile__line">
-                            <% education.forEach((videoEducation) => { %>
-                        <div class="craft-education-light">
-                            <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= videoEducation.href %>?" width=800;
-                                height=600;><img src="https://img.youtube.com/vi/<%= videoEducation.img %>/maxresdefault.jpg"
+               
+               
+                <div class="content_<%-test[i][0].class%>_gallery-mobile content_block_gallery-mobile" >
+                    <div class="content_<%-test[i][0].class%>_gallery-mobile__view content_block_gallery-mobile__view" style="  height: 900px;
+                            transition :all .1s linear .25s;
+                                overflow: hidden;">
+                        <div class="content_<%-test[i][0].class%>_gallery-mobile__line content_block_gallery-mobile__line">
+                            <% for(var j=0;j<test[i].length;j++){ %> 
+                        <div class="light-<%-test[i][0].class%>" style="height:300px">
+                            <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= test[i][j].href %>?" width=800;
+                                height=600;><img src="https://img.youtube.com/vi/<%= test[i][j].href %>/maxresdefault.jpg"
                                     width="100%" height="280"></a>
                         </div>
-                    
-                        <% }) %>
+                        <% } %>
                     </div>
                     </div>
-                     <button id="education_load">LOAD MORE</button>
+                     <button id="<%-test[i][0].class%>" value="<%-test[i][0].class%>" >LOAD MORE</button>
                 </div>
-                <div class="content_craft-education_gallery">
-
-                    <div class="content_craft-education_gallery__prev">
-                        <div class="content_craft-education_gallery__button-prev">
-                            <?xml version="1.0" encoding="utf-8"?>
-                            <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg version="1.1" class="prev" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.8 6.9" style="enable-background:new 0 0 10.8 6.9;"
-                                xml:space="preserve">
-                                <style type="text/css">
-                                    s.st0 {
-                                        transform: rotate(90deg);
-                                    }
-
-                                    .st0 {
-                                        fill: rgb(0, 0, 0);
-                                    }
-                                </style>
-                                <path class="st0" d="M5.7,6.8C5.5,7,5.3,7,5.1,6.8l-5-5C0,1.7,0,1.4,0.1,1.2l1.1-1.1C1.4,0,1.7,0,1.8,0.1l3.6,3.6L9,0.1
-                            C9.1,0,9.4,0,9.6,0.1l1.1,1.1c0.2,0.2,0.2,0.4,0,0.6L5.7,6.8z" />
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                            </svg></div>
-                    </div>
-                    <div class="content_craft-education_gallery__slider">
-                        <div class="your-class2">
-                            <% education.forEach((videoEducation) => { %>
-                            <div>
-                                <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= videoEducation.href %>?"
-                                    width=800; height=600;><img src="https://img.youtube.com/vi/<%= videoEducation.img %>/mqdefault.jpg"
-                                        width="100%" height="200"></a>
-                            </div>
-                            <% }) %>
-
-                        </div>
-                    </div>
-                    <div class="content_craft-education_gallery__next">
-                        <div class="content_craft-education_gallery__button-next">
-                            <?xml version="1.0" encoding="utf-8"?>
-                            <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg version="1.1" class="next" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.8 6.9" style="enable-background:new 0 0 10.8 6.9;"
-                                xml:space="preserve">
-                                <style type="text/css">
-                                    s.st0 {
-                                        transform: rotate(270deg);
-                                    }
-
-                                    .st0 {
-                                        fill: rgb(0, 0, 0);
-                                    }
-                                </style>
-                                <path class="st0" d="M5.7,6.8C5.5,7,5.3,7,5.1,6.8l-5-5C0,1.7,0,1.4,0.1,1.2l1.1-1.1C1.4,0,1.7,0,1.8,0.1l3.6,3.6L9,0.1
-                            C9.1,0,9.4,0,9.6,0.1l1.1,1.1c0.2,0.2,0.2,0.4,0,0.6L5.7,6.8z" />
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                            </svg></div>
-                    </div>
-
-                </div>
+           
             </div>
-
-            <div class="content_inspiration">
-                <div class="content_inspiration__title">
-                    <h2><span>INSPIRATION</span></h2>
-                </div>
-                <div class="content_inspiration_gallery-mobile" >
-                    <div class="content_inspiration_gallery-mobile__view">
-                        <div class="content_inspiration-education-mobile__line">
-                            <% inspiration.forEach((videoInspiration) => { %>
-                        <div class="inspiration-light">
-                            <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= videoInspiration.href %>?" width=800;
-                                height=600;><img src="https://img.youtube.com/vi/<%= videoInspiration.img %>/maxresdefault.jpg"
-                                    width="100%" height="280"></a>
-                        </div>
-                    
-                        <% }) %>
-                    </div>
-                    </div>
-                     <button id="inspiration_load">LOAD MORE</button>
-                </div>
-                <div class="content_inspiration_gallery">
-
-                    <div class="content_inspiration_gallery__prev">
-                        <div class="content_inspiration_gallery__button-prev">
-                            <?xml version="1.0" encoding="utf-8"?>
-                            <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg version="1.1" class="prev" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.8 6.9" style="enable-background:new 0 0 10.8 6.9;"
-                                xml:space="preserve">
-                                <style type="text/css">
-                                    s.st0 {
-                                        transform: rotate(90deg);
-                                    }
-
-                                    .st0 {
-                                        fill: rgb(0, 0, 0);
-                                    }
-                                </style>
-                                <path class="st0" d="M5.7,6.8C5.5,7,5.3,7,5.1,6.8l-5-5C0,1.7,0,1.4,0.1,1.2l1.1-1.1C1.4,0,1.7,0,1.8,0.1l3.6,3.6L9,0.1
-                            C9.1,0,9.4,0,9.6,0.1l1.1,1.1c0.2,0.2,0.2,0.4,0,0.6L5.7,6.8z" />
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                            </svg></div>
-                    </div>
-                    <div class="content_inspiration_gallery__slider">
-                        <div class="your-class3">
-                            <% inspiration.forEach((videoInspiration) => { %>
-                            <div>
-                                <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= videoInspiration.href %>?"
-                                    width=800; height=600;><img src="https://img.youtube.com/vi/<%= videoInspiration.img %>/mqdefault.jpg"
-                                        width="100%" height="200"></a>
-                            </div>
-                            <% }) %>
-
-                        </div>
-                    </div>
-                    <div class="content_inspiration_gallery__next">
-                        <div class="content_inspiration_gallery__button-next">
-                            <?xml version="1.0" encoding="utf-8"?>
-                            <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg version="1.1" class="next" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.8 6.9" style="enable-background:new 0 0 10.8 6.9;"
-                                xml:space="preserve">
-                                <style type="text/css">
-                                    s.st0 {
-                                        transform: rotate(270deg);
-                                    }
-
-                                    .st0 {
-                                        fill: rgb(0, 0, 0);
-                                    }
-                                </style>
-                                <path class="st0" d="M5.7,6.8C5.5,7,5.3,7,5.1,6.8l-5-5C0,1.7,0,1.4,0.1,1.2l1.1-1.1C1.4,0,1.7,0,1.8,0.1l3.6,3.6L9,0.1
-                            C9.1,0,9.4,0,9.6,0.1l1.1,1.1c0.2,0.2,0.2,0.4,0,0.6L5.7,6.8z" />
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                            </svg></div>
-                    </div>
-
-                </div>
-            </div>
-
+            <%}%> 
+           
+        
         </section>
 
         <footer class="footer">
@@ -706,12 +557,6 @@
     </footer>
     </div>
     </div>
-
-
-
-
-
-
 
 
 

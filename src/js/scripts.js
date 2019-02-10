@@ -1,30 +1,76 @@
-// Your code here...
-$(document).ready(function(){
-  $('.your-class').slick({
-    
-    prevArrow:$('.content_step-by-step_gallery__button-prev'),
-    nextArrow:$('.content_step-by-step_gallery__button-next'),
-    slidesToShow: 3,
-    speed: 300,
-    centerPadding:50,
-  });
+const test = [
+  [
+      {href: 'PZjGrmHdFME',class:'inspiration'},
+      {href: 'vz0k8O-Ef9Y',class:'inspiration'},
+      {href: '6oPBFnsqJW8',class:'inspiration'},
+      {href: '6oPBFnsqJW8',class:'inspiration'},
+      {href: '6oPBFnsqJW8',class:'inspiration'},
+      {href: '6oPBFnsqJW8',class:'inspiration'},
+      
+  ],
+  [
+  
+  
+    {href: 'RmNWNLXmswk',class:'craft-education'},
+    {href: '-tztXOz8Vc0',class:'craft-education'},
+    {href: 'kUfIVtyydgQ',class:'craft-education'},
+    {href: 'kUfIVtyydgQ',class:'craft-education'},
+    {href: 'kUfIVtyydgQ',class:'craft-education'},
+  
+],
+  
+  [
+      {href: 'z8M0Fa1JVco',class:'step-by-step'},
+      {href: 'Wi2KcdoCuo4',class:'step-by-step'},
+      {href: '8H6dYUgQKB8',class:'step-by-step'},
+      {href: 'PZjGrmHdFME',class:'step-by-step'},
+      {href: '_wLGr24VeoI',class:'step-by-step'},
+      {href: 'DG4FAU5qmMY',class:'step-by-step'},
+      
+  ],
+ 
+  
+  
+  ];
+  const a=5;
+  
 
-  $('.your-class2').slick({
-    
-    prevArrow:$('.content_craft-education_gallery__button-prev'),
-    nextArrow:$('.content_craft-education_gallery__button-next'),
+$(document).ready(function(){
+  for(var i=0;i<test.length;i++){
+  $(`.${test[i][0].class}`).slick({
+   
+    prevArrow:$(`.content_${test[i][0].class}_gallery__button-prev`),
+    nextArrow:$(`.content_${test[i][0].class}_gallery__button-next`),
     slidesToShow: 3,
     speed: 300,
     centerPadding:50,
-  });
-  $('.your-class3').slick({
-    
-    prevArrow:$('.content_inspiration_gallery__button-prev'),
-    nextArrow:$('.content_inspiration_gallery__button-next'),
-    slidesToShow: 3,
-    speed: 300,
-    centerPadding:50,
-  });
+    responsive: [
+      {
+        breakpoint: 900
+        
+        
+        
+        
+        
+        ,
+        settings: {
+          slidesToShow: 2,
+          speed: 300,
+          centerPadding:50,
+      
+        }
+      },
+     
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  
+  }); 
+  console.log(`.content_${test[i][0].class}__button-prev`);
+}
+
+ 
   $(".fa-search").click(function(){
 
     $(".header_top__wrap, .header_top__input").toggleClass("active");
@@ -37,35 +83,107 @@ $(document).ready(function(){
 
 });
 
-function handler1(){
-  
-  
-  const shift = parseInt((getComputedStyle(document.querySelector(".light")
+
+
+var fired_button = $("button").val();
+$("button").click(function() {
+  var fired_button = $(this).val();
+
+  const shift = parseInt((getComputedStyle(document.querySelector(`.light-${fired_button}`)
   ).height)) ;
 
-  const count_of_images=(document.querySelectorAll('.light').length);
+  const count_of_images=(document.querySelectorAll(`.light-${fired_button}`).length-1);
 let height_of_line=count_of_images*shift;
 const start=shift*3;
 
 
 let first;
-const view = parseInt((getComputedStyle(document.querySelector(".content_step-by-step_gallery-mobile__view")
+const view = parseInt((getComputedStyle(document.querySelector(`.content_${fired_button}_gallery-mobile__view`)
 ).height)) ;
 
 if(view !== height_of_line){
-document.getElementsByClassName('content_step-by-step_gallery-mobile__view')[0].style.height = height_of_line+'px'; 
+document.getElementsByClassName(`content_${fired_button}_gallery-mobile__view`)[0].style.height = height_of_line+'px'; 
+
+
+}
+else{
+  
+  document.getElementsByClassName(`content_${fired_button}_gallery-mobile__view`)[0].style.height = start+'px';
+  
+}
+console.log(`.content_${fired_button}_gallery-mobile__view`);
+});
+
+/*
+function User(name) {
+
+  this.name = name;
+
+  this.sayHi = function() {
+    for(var i=0;i<test.length;i++){
+    const shift = parseInt((getComputedStyle(document.querySelector(`.${test[i][0].class}`)
+    ).height)) ;
+  alert(`.${test[i][0].class}`);
+    const count_of_images=(document.querySelectorAll(`.${test[i][0].class}`).length);
+  let height_of_line=count_of_images*shift;
+  const start=shift*3;
+  
+  
+  let first;
+  const view = parseInt((getComputedStyle(document.querySelector(`.content_${test[i][0].class}_gallery-mobile__view`)
+  ).height)) ;
+  
+  if(view !== height_of_line){
+  document.getElementsByClassName(`content_${test[i][0].class}_gallery-mobile__view`)[0].style.height = height_of_line+'px'; 
+
+  
+  }
+  else{
+    
+    document.getElementsByClassName(`content_${test[i][0].class}_gallery-mobile__view`)[0].style.height = start+'px';
+   
+  }
+}
+  };
+}
+for(var i=0;i<test.length;i++){
+var ivan = new User(`${test[i][0].class}`);
+
+
+}
+
+for(var i=0;i<test.length;i++){
+  $(`#${test[i][0].class}`).click(function(){
+  
+  
+  const shift = parseInt((getComputedStyle(document.querySelector(`.${test[i][0].class}`)
+  ).height)) ;
+
+  const count_of_images=(document.querySelectorAll(`.${test[i][0].class}`).length);
+let height_of_line=count_of_images*shift;
+const start=shift*3;
+
+
+let first;
+const view = parseInt((getComputedStyle(document.querySelector(`.content_${test[i][0].class}_gallery-mobile__view`)
+).height)) ;
+
+if(view !== height_of_line){
+document.getElementsByClassName(`content_${test[i][0].class}_gallery-mobile__view`)[0].style.height = height_of_line+'px'; 
 document.getElementById('load').textContent = "Hide";
 
 }
 else{
   
-  document.getElementsByClassName('content_step-by-step_gallery-mobile__view')[0].style.height = start+'px';
+  document.getElementsByClassName(`content_${test[i][0].class}_gallery-mobile__view`)[0].style.height = start+'px';
   document.getElementById('load').textContent = "Load more";
 }
 
-  
-}
-load.addEventListener("click", handler1);
+alert(`tt.${test[i][0].class}`) ;
+});
+//load.addEventListener("click", handler1);
+
+/*
 function hand(){
   
   console.log("s");
@@ -119,7 +237,7 @@ else{
 
 }
 
-inspiration_load.addEventListener("click",hand2)
+inspiration_load.addEventListener("click",hand2);
 
-  
+  */
 
