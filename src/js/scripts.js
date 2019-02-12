@@ -1,13 +1,14 @@
 const test = [
   [
-      {href: 'PZjGrmHdFME',class:'inspiration'},
-      {href: 'vz0k8O-Ef9Y',class:'inspiration'},
-      {href: '6oPBFnsqJW8',class:'inspiration'},
-      {href: '6oPBFnsqJW8',class:'inspiration'},
-      {href: '6oPBFnsqJW8',class:'inspiration'},
-      {href: '6oPBFnsqJW8',class:'inspiration'},
-      
-  ],
+    {href: 'z8M0Fa1JVco',class:'step-by-step'},
+    {href: 'Wi2KcdoCuo4',class:'step-by-step'},
+    {href: '8H6dYUgQKB8',class:'step-by-step'},
+    {href: 'PZjGrmHdFME',class:'step-by-step'},
+    {href: '_wLGr24VeoI',class:'step-by-step'},
+    {href: 'DG4FAU5qmMY',class:'step-by-step'},
+    
+],
+ 
   [
   
   
@@ -18,16 +19,16 @@ const test = [
     {href: 'kUfIVtyydgQ',class:'craft-education'},
   
 ],
-  
-  [
-      {href: 'z8M0Fa1JVco',class:'step-by-step'},
-      {href: 'Wi2KcdoCuo4',class:'step-by-step'},
-      {href: '8H6dYUgQKB8',class:'step-by-step'},
-      {href: 'PZjGrmHdFME',class:'step-by-step'},
-      {href: '_wLGr24VeoI',class:'step-by-step'},
-      {href: 'DG4FAU5qmMY',class:'step-by-step'},
+   [
+      {href: 'PZjGrmHdFME',class:'inspiration'},
+      {href: 'vz0k8O-Ef9Y',class:'inspiration'},
+      {href: '6oPBFnsqJW8',class:'inspiration'},
+      {href: '6oPBFnsqJW8',class:'inspiration'},
+      {href: '6oPBFnsqJW8',class:'inspiration'},
+      {href: '6oPBFnsqJW8',class:'inspiration'},
       
   ],
+ 
  
   
   
@@ -39,8 +40,8 @@ $(document).ready(function(){
   for(var i=0;i<test.length;i++){
   $(`.${test[i][0].class}`).slick({
    
-    prevArrow:$(`.content_${test[i][0].class}_gallery__button-prev`),
-    nextArrow:$(`.content_${test[i][0].class}_gallery__button-next`),
+    prevArrow:$(`.content-${test[i][0].class}_gallery__button-prev`),
+    nextArrow:$(`.content-${test[i][0].class}_gallery__button-next`),
     slidesToShow: 3,
     speed: 300,
     centerPadding:50,
@@ -67,15 +68,15 @@ $(document).ready(function(){
     ]
   
   }); 
-  console.log(`.content_${test[i][0].class}__button-prev`);
+  console.log(`.content-${test[i][0].class}__button-prev`);
 }
 
  
   $(".fa-search").click(function(){
 
-    $(".header_top__wrap, .header_top__input").toggleClass("active");
+    $(".top__wrap, .top__input").toggleClass("active");
 
-    $("header_top__input[type='text']").focus();
+    $("top__input[type='search']").focus();
 
   });
   
@@ -98,20 +99,20 @@ const start=shift*3;
 
 
 let first;
-const view = parseInt((getComputedStyle(document.querySelector(`.content_${fired_button}_gallery-mobile__view`)
+const view = parseInt((getComputedStyle(document.querySelector(`.content-${fired_button}_gallery-mobile__view`)
 ).height)) ;
 
 if(view !== height_of_line){
-document.getElementsByClassName(`content_${fired_button}_gallery-mobile__view`)[0].style.height = height_of_line+'px'; 
-
+document.getElementsByClassName(`content-${fired_button}_gallery-mobile__view`)[0].style.height = height_of_line+'px'; 
+document.getElementById(`${fired_button}`).innerHTML = 'Hide'
 
 }
 else{
   
-  document.getElementsByClassName(`content_${fired_button}_gallery-mobile__view`)[0].style.height = start+'px';
-  
+  document.getElementsByClassName(`content-${fired_button}_gallery-mobile__view`)[0].style.height = start+'px';
+  document.getElementById(`${fired_button}`).innerHTML = 'Load more'
 }
-console.log(`.content_${fired_button}_gallery-mobile__view`);
+console.log(`.content-${fired_button}_gallery-mobile__view`);
 });
 
 /*

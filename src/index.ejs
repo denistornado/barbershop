@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
 
 
@@ -65,34 +66,35 @@
 %>
 <% const test = [
 [
-    {href: 'PZjGrmHdFME',class:'inspiration'},
-    {href: 'vz0k8O-Ef9Y',class:'inspiration'},
-    {href: '6oPBFnsqJW8',class:'inspiration'},
-    {href: '6oPBFnsqJW8',class:'inspiration'},
-    {href: '6oPBFnsqJW8',class:'inspiration'},
-    {href: '6oPBFnsqJW8',class:'inspiration'},
-    
-],
-[
+  {href: 'z8M0Fa1JVco',class:'step-by-step'},
+  {href: 'Wi2KcdoCuo4',class:'step-by-step'},
+  {href: '8H6dYUgQKB8',class:'step-by-step'},
+  {href: 'PZjGrmHdFME',class:'step-by-step'},
+  {href: '_wLGr24VeoI',class:'step-by-step'},
+  {href: 'DG4FAU5qmMY',class:'step-by-step'},
   
-  
-{href: 'RmNWNLXmswk',class:'craft-education'},
-{href: '-tztXOz8Vc0',class:'craft-education'},
-{href: 'kUfIVtyydgQ',class:'craft-education'},
-{href: 'kUfIVtyydgQ',class:'craft-education'},
-{href: 'kUfIVtyydgQ',class:'craft-education'},
-
 ],
 
 [
-    {href: 'z8M0Fa1JVco',class:'step-by-step'},
-    {href: 'Wi2KcdoCuo4',class:'step-by-step'},
-    {href: '8H6dYUgQKB8',class:'step-by-step'},
-    {href: 'PZjGrmHdFME',class:'step-by-step'},
-    {href: '_wLGr24VeoI',class:'step-by-step'},
-    {href: 'DG4FAU5qmMY',class:'step-by-step'},
-    
+
+
+  {href: 'RmNWNLXmswk',class:'craft-education'},
+  {href: '-tztXOz8Vc0',class:'craft-education'},
+  {href: 'kUfIVtyydgQ',class:'craft-education'},
+  {href: 'kUfIVtyydgQ',class:'craft-education'},
+  {href: 'kUfIVtyydgQ',class:'craft-education'},
+
 ],
+[
+{href: 'PZjGrmHdFME',class:'inspiration'},
+{href: 'vz0k8O-Ef9Y',class:'inspiration'},
+{href: '6oPBFnsqJW8',class:'inspiration'},
+{href: '6oPBFnsqJW8',class:'inspiration'},
+{href: '6oPBFnsqJW8',class:'inspiration'},
+{href: '6oPBFnsqJW8',class:'inspiration'},
+
+],
+
 
 
 
@@ -102,20 +104,20 @@
     <div id="container">
 
         <header class="header">
-            <div class="header_top">
-                <div class="header_top__wrap">
+            <div class="top">
+                <div class="top__wrap">
                     <form>
-                        <input type="text" class="header_top__input" placeholder="Find">
+                        <input type="text" class="top__input" placeholder="Find">
                     </form>
 
                 </div>
-                <div class="header_top_adress">
-                    <span>Nearliest salon</span> <img src="img/ico_dropdown.svg" height="15px" width="15px" alt=""><br><span
+                <div class="adress">
+                    <span>NEARLIEST SALON</span> <img src="img/ico_dropdown.svg" height="10px" width="10px" alt=""><br><span
                         id="near-salon">
                         <% nearSalon.forEach((salon) => { %>
                         <%= salon.title %>
                         <% }) %></span> </div>
-                <div class="header_top_mobile-navigation">
+                <div class="mobile-navigation">
                     <input type="checkbox" name="" id="choice">
                     <label class="choice-container" for="choice">
                         <span class="button-choice_1"></span>
@@ -137,22 +139,22 @@
                 </div>
 
                
-                <img class="header_top_logo" src="img/logo.svg" height="80px" width="300px" alt="">
+                <img class="logo" src="img/logo.svg" height="60px" width="340px" alt="" >
 
 
 
-                <img class="fa fa-search" src="img/ico_search.svg" height="20px" width="20px" alt="">
+                <img class="fa fa-search" src="img/ico_search.svg" height="10px" width="10px" alt="">
                 
             </div>
 
 
 
-            <div class="header_bottom">
-                <div class="header_bottom__menu">
-                    <ul>
+            <div class="bottom">
+                <div class="bottom__menu">
+                    <ul class="bottom__list">
                         <% menuItems.forEach((item) => { %>
 
-                        <li class="menu__item"><a class="menu__link" href="<%= item.link; %>">
+                        <li class="bottom__item"><a class="bottom__link" href="<%= item.link; %>">
                                 <%= item.title %></a></li>
 
                         <% }) %>
@@ -165,46 +167,43 @@
 
 
         <div class="present-location">
-            <ul class="present-location__ul">
-                <li class="present-location__li">HOME</li>
-                <li class="present-location__li">/</li>
-                <li class="present-location__li"><a class="present-location__a" href="">VIDEOS</a></li>
+            <ul class="present-location__list">
+                <li class="present-location__item"><a class="present-location__link_path" href="">HOME</a></li>
+                <li class="present-location__item">/</li>
+                <li class="present-location__item"><a class="present-location__link_end" href="">VIDEOS</a></li>
             </ul>
         </div>
         <section class="content">
-            <div class="content_main-video">
-                <div class="content_title">
+            <div class="main-video">
+                <div class="main-video__title">
                     <h1>VIDEOS</h1>
                 </div>
-                <div class=play-main-container> 
+                <div class=main-video__container> 
                        
                 <a data-fancybox="gallery" href="https://www.youtube.com/embed/8H6dYUgQKB8?start=4" width=800; height=600;>
                     <img  class="play-main"src="img/play5.png" alt=""> <img 
-                        src="https://img.youtube.com/vi/8H6dYUgQKB8/maxresdefault.jpg" width="100%" height="450"></a>
+                        src="https://img.youtube.com/vi/8H6dYUgQKB8/maxresdefault.jpg" width="100%" height="490"></a>
                     </div>
-                <p class="content_main-video_discription"> <strong> ipsum dolor sit amet consectetur adipisicing elit.
-                        Fugiat debitis praesentium quos ducimus fugit. Voluptatibus quia sequi eius dolore quae,
-                        asperiores consectetur accusantium suscipit adipisci. Provident delectus animi sequi.
-                        Consectetur!</strong></p>
+                <p class="main-video__discription"> <strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Non corporis blanditiis perspiciatis ipsum officiis harum, it amet consectetur adipisicing elit. Non corporis blanditiis.</strong></p>
                 <hr color="gray">
             </div>
 
             <% for(var i=0;i<test.length;i++){%> 
-            <div class="content_<%-test[i][0].class%> content_block">
-                <div class="content_<%-test[i][0].class%>__title content_block__title"  >
+            <div class="content-<%-test[i][0].class%> block">
+                <div class="content-<%-test[i][0].class%>__title block__title"  >
 
                    
                      
-                    <h2>   <%-test[i][0].class%></h2>
+                     <%-test[i][0].class%>
                
                 </div>
               
 
                      
-                <div class="content_<%-test[i][0].class%>_gallery content_block_gallery">
+                <div class="content-<%-test[i][0].class%>_gallery gallery">
 
-                    <div class="content_<%-test[i][0].class%>_gallery__prev content_block_gallery__prev" >
-                        <div class="content_<%-test[i][0].class%>_gallery__button-prev content_block_gallery__button-prev" >
+                    <div class="content-<%-test[i][0].class%>_gallery__prev gallery__prev" >
+                        <div class="content-<%-test[i][0].class%>_gallery__button-prev gallery__button-prev" >
                             <?xml version="1.0" encoding="utf-8"?>
                             <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                             <svg version="1.1" class="prev" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
@@ -235,14 +234,14 @@
                                 </g>
                             </svg></div>
                     </div>
-                    <div class="content_<%-test[i][0].class%>_gallery__slider content_block_gallery__slider">
+                    <div class="content-<%-test[i][0].class%>_gallery__slider gallery__slider">
                        
                         <div class="<%-test[i][0].class%>">
                             <% for(var j=0;j<test[i].length;j++){ %> 
-                            <div>
+                            <div class="play-container">
                                 <a data-fancybox="gallery" href="https://youtu.be/<%= test[i][j].href %>" width=800;
-                                    height=600;><img src="https://img.youtube.com/vi/<%= test[i][j].href %>/maxresdefault.jpg"
-                                        width="100%" height="200"></a>
+                                    height=600;> <img src="https://img.youtube.com/vi/<%= test[i][j].href %>/maxresdefault.jpg"
+                                        width="100%" height="180"> <img  class="play"src="img/play5.png" alt="">  </a>
                             </div>
                             <% } %>
 
@@ -251,8 +250,8 @@
                         </div>
                      
                     </div>
-                    <div class="content_<%-test[i][0].class%>_gallery__next content_block_gallery__next" >
-                        <div class="content_<%-test[i][0].class%>_gallery__button-next content_block_gallery__button-next"
+                    <div class="content-<%-test[i][0].class%>_gallery__next gallery__next" >
+                        <div class="content-<%-test[i][0].class%>_gallery__button-next gallery__button-next"
                         >
                             <?xml version="1.0" encoding="utf-8"?>
                             <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -290,16 +289,18 @@
                 </div>
                
                
-                <div class="content_<%-test[i][0].class%>_gallery-mobile content_block_gallery-mobile" >
-                    <div class="content_<%-test[i][0].class%>_gallery-mobile__view content_block_gallery-mobile__view" style="  height: 900px;
+                <div class="content-<%-test[i][0].class%>_gallery-mobile gallery-mobile" >
+                    <div class="content-<%-test[i][0].class%>_gallery-mobile__view gallery-mobile__view" style="  height: 1050px;
                             transition :all .1s linear .25s;
                                 overflow: hidden;">
-                        <div class="content_<%-test[i][0].class%>_gallery-mobile__line content_block_gallery-mobile__line">
+                        <div class="content-<%-test[i][0].class%>_gallery-mobile__line gallery-mobile__line">
                             <% for(var j=0;j<test[i].length;j++){ %> 
-                        <div class="light-<%-test[i][0].class%>" style="height:300px">
+                        <div class="light-<%-test[i][0].class%>" style="height:350px">
+                            <div class="play-mobile-container">
                             <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= test[i][j].href %>?" width=800;
                                 height=600;><img src="https://img.youtube.com/vi/<%= test[i][j].href %>/maxresdefault.jpg"
-                                    width="100%" height="280"></a>
+                                    width="100%" height="330">  <img  class="play-mobile"src="img/play5.png" alt=""></a>
+                                </div>
                         </div>
                         <% } %>
                     </div>
@@ -314,15 +315,15 @@
         </section>
 
         <footer class="footer">
-                <div class="footer_social-mobile">
+                <div class="social-mobile">
 
-                        <div class="footer_social-mobile__item">
+                        <div class="social-mobile__list">
                             <a href="">
-                                <div class="footer_social-mobile__facebook">
+                                <div class="social-mobile__facebook">
                                     <?xml version="1.0" encoding="utf-8"?>
                                     <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                     <svg width="50" height="50" version="1.1" class="Icons" align="center" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="100px" y="0px" viewBox="0 0 180 100"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="100px" y="0px"  fill="#cccccc"fill="#f8faf1" viewBox="0 0 180 100"
                                         style="enable-background:new 0 0 0 0;" xml:space="preserve">
                                         <path id="Facebook_3_" d="M9.1,17.4c0,2.3,0,12.4,0,12.4H0V45h9.1v45h18.6V45h12.5c0,0,1.2-7.3,1.7-15.2c-1.6,0-14.2,0-14.2,0
                                 s0-8.8,0-10.4c0-1.5,2-3.6,4-3.6c2,0,6.2,0,10.2,0c0-2.1,0-9.2,0-15.8c-5.2,0-11.2,0-13.8,0C8.6,0,9.1,15.2,9.1,17.4z" />
@@ -330,12 +331,12 @@
                             </a>
         
                         </div>
-                        <div class="footer_social-mobile__twitter">
+                        <div class="social-mobile__twitter">
                             <a href="">
                                 <?xml version="1.0" encoding="utf-8"?>
                                 <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                 <svg width="50" height="50" version="1.1" class="Icons" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="100px" y="0px" viewBox="0 0 150 70" style="enable-background:new 0 0 0 0;"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  fill="#cccccc" viewBox="0 0 180 100" fill="#f8faf1" style="enable-background:new 0 0 0 0;"
                                     xml:space="preserve">
                                     <path id="Twitter__x28_alt_x29__2_" d="M79.8,27.6c5.1-0.4,8.5-2.7,9.8-5.8c-1.8,1.1-7.5,2.3-10.6,1.2c-0.2-0.7-0.3-1.4-0.5-2.1
                                 C76.1,12.1,68,5.1,59.4,5.9c0.7-0.3,1.4-0.5,2.1-0.8C62.5,4.8,68,3.9,67.1,2c-0.7-1.7-7.5,1.3-8.7,1.7C60,3,62.8,1.9,63.1,0
@@ -346,12 +347,12 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="footer_social-mobile__pinterest">
+                        <div class="social-mobile__pinterest">
                             <a href="">
                                 <?xml version="1.0" encoding="utf-8"?>
                                 <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                 <svg width="50" height="50" version="1.1" class="Icons" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 180 100" style="enable-background:new 0 0 0 0;"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  fill="#cccccc" viewBox="0 0 180 100" fill="#f8faf1" style="enable-background:new 0 0 0 0;"
                                     xml:space="preserve">
                                     <path id="Path" d="M22.3,4C10.8,8.5,2.9,17.4,0.7,29.3c-1.3,7.3-0.8,15.3,2.4,22.1c0.7,1.5,1.6,3,2.6,4.3c0.5,0.7,1,1.3,1.6,1.9
                                 c1-0.4,2-0.8,3-1.4c3.9-2.2,6.8-5.6,10.2-8.5c-11.2-13,0.7-29.1,15.5-32.6c13.8-3.3,32.6,2.4,36.8,16.6c1.7,5.9,0.6,12.4-4.2,16.7
@@ -363,12 +364,12 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="footer_social-mobile__youtube">
+                        <div class="social-mobile__youtube">
                             <a href="">
                                 <?xml version="1.0" encoding="utf-8"?>
                                 <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                 <svg width="50" height="50" version="1.1" class="Icons" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 180 100" style="enable-background:new 0 0 0 0;"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  fill="#cccccc" viewBox="0 0 180 100" fill="#f8faf1" style="enable-background:new 0 0 0 0;"
                                     xml:space="preserve">
                                     <path id="YouTube_2_" d="M63.4,65.8h-4.9l0-2.9c0-1.3,1-2.3,2.3-2.3h0.3c1.3,0,2.3,1,2.3,2.3L63.4,65.8z M44.9,59.7
                                 c-1.3,0-2.3,0.8-2.3,1.9v14c0,1,1,1.9,2.3,1.9c1.3,0,2.3-0.8,2.3-1.9v-14C47.2,60.5,46.2,59.7,44.9,59.7z M75,51.9v26.5
@@ -388,12 +389,12 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="footer_social-mobile__instagram">
+                        <div class="social-mobile__instagram">
                             <a href="">
                                 <?xml version="1.0" encoding="utf-8"?>
                                 <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                 <svg width="50" height="50" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 180 100" style="enable-background:new 0 0 0 0;"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  fill="#cccccc" viewBox="0 0 180 100" fill="#f8faf1" style="enable-background:new 0 0 0 0;"
                                     xml:space="preserve">
         
                                     <path class="st" d="M65.2,55.4c0-5.9-4.8-10.6-10.6-10.6c-5.9,0-10.6,4.8-10.6,10.6c0,5.9,4.8,10.6,10.6,10.6
@@ -421,13 +422,13 @@
                     </div>
         
             </div>
-            <div class="footer_location-mobile">
-                    <div class="footer_location-mobile__text">
+            <div class="location-mobile">
+                    <div class="location-mobile__text">
                         <span>LOCATION:<span id="location">UNITED STATES</span><br>LANGUAGE:<span id="language">ENGLISH</span></span>
                     </div>
                 </div>
-            <div class="footer_private-terms-mobile">
-                <div class="footer_private-terms-mobile__text">
+            <div class="private-terms-mobile">
+                <div class="private-terms-mobile__text">
 
                     <span>PRIVATE POLICE &nbsp; TERMS OF USE <br> CONTACT US NEWSLETTER SITEMAP</span>
                 </div>
@@ -435,37 +436,37 @@
 
 
 
-            <div class="footer_private-terms">
-                <div class="footer_private-terms__text">
+            <div class="private-terms">
+                <div class="private-terms__text">
 
                     <span>PRIVATE POLICE &nbsp; TERMS OF USE <br> CONTACT US NEWSLETTER SITEMAP</span>
                 </div>
             </div>
 
-            <div class="footer_social">
+            <div class="social">
 
-                <div class="footer_social__item">
+                <div class="social__list">
                     <a href="">
-                        <div class="footer_social__facebook">
+                        <div class="social__facebook">
                             <?xml version="1.0" encoding="utf-8"?>
                             <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg width="50" height="50" version="1.1" class="Icons" align="center" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="100px" y="0px" viewBox="0 0 180 100"
+                            <svg  version="1.1" class="Icons" align="center" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" fill="#cccccc" viewBox="0 0 180 100"
                                 style="enable-background:new 0 0 0 0;" xml:space="preserve">
-                                <path id="Facebook_3_" d="M9.1,17.4c0,2.3,0,12.4,0,12.4H0V45h9.1v45h18.6V45h12.5c0,0,1.2-7.3,1.7-15.2c-1.6,0-14.2,0-14.2,0
+                                <path width="100" height="100" id="Facebook_3_" d="M9.1,17.4c0,2.3,0,12.4,0,12.4H0V45h9.1v45h18.6V45h12.5c0,0,1.2-7.3,1.7-15.2c-1.6,0-14.2,0-14.2,0
                         s0-8.8,0-10.4c0-1.5,2-3.6,4-3.6c2,0,6.2,0,10.2,0c0-2.1,0-9.2,0-15.8c-5.2,0-11.2,0-13.8,0C8.6,0,9.1,15.2,9.1,17.4z" />
                             </svg>
                     </a>
 
                 </div>
-                <div class="footer_social__twitter">
+                <div class="social__twitter">
                     <a href="">
                         <?xml version="1.0" encoding="utf-8"?>
                         <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg width="50" height="50" version="1.1" class="Icons" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="100px" y="0px" viewBox="0 0 150 70" style="enable-background:new 0 0 0 0;"
+                        <svg version="1.1" class="Icons" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="100px" y="0px" viewBox="0 0 150 70" fill="#cccccc" style="enable-background:new 0 0 0 0;"
                             xml:space="preserve">
-                            <path id="Twitter__x28_alt_x29__2_" d="M79.8,27.6c5.1-0.4,8.5-2.7,9.8-5.8c-1.8,1.1-7.5,2.3-10.6,1.2c-0.2-0.7-0.3-1.4-0.5-2.1
+                            <path width="60" height="50" id="Twitter__x28_alt_x29__2_" d="M79.8,27.6c5.1-0.4,8.5-2.7,9.8-5.8c-1.8,1.1-7.5,2.3-10.6,1.2c-0.2-0.7-0.3-1.4-0.5-2.1
                         C76.1,12.1,68,5.1,59.4,5.9c0.7-0.3,1.4-0.5,2.1-0.8C62.5,4.8,68,3.9,67.1,2c-0.7-1.7-7.5,1.3-8.7,1.7C60,3,62.8,1.9,63.1,0
                         c-2.6,0.4-5.1,1.6-7,3.3c0.7-0.8,1.2-1.7,1.3-2.7C50.6,5,46.6,13.9,43.3,22.4c-2.5-2.5-4.8-4.4-6.8-5.5c-5.7-3-12.4-6.2-23.1-10.2
                         c-0.3,3.5,1.7,8.2,7.7,11.3c-1.3-0.2-3.7,0.2-5.5,0.7c0.8,4,3.3,7.4,10.1,9c-3.1,0.2-4.7,0.9-6.2,2.4c1.4,2.8,4.9,6.1,11.1,5.4
@@ -474,14 +475,14 @@
                         </svg>
                     </a>
                 </div>
-                <div class="footer_social__pinterest">
+                <div class="social__pinterest">
                     <a href="">
                         <?xml version="1.0" encoding="utf-8"?>
                         <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg width="50" height="50" version="1.1" class="Icons" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 180 100" style="enable-background:new 0 0 0 0;"
+                        <svg  version="1.1" class="Icons" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 180 100" fill="#cccccc" style="enable-background:new 0 0 0 0;"
                             xml:space="preserve">
-                            <path id="Path" d="M22.3,4C10.8,8.5,2.9,17.4,0.7,29.3c-1.3,7.3-0.8,15.3,2.4,22.1c0.7,1.5,1.6,3,2.6,4.3c0.5,0.7,1,1.3,1.6,1.9
+                            <path width="50" height="50" id="Path" d="M22.3,4C10.8,8.5,2.9,17.4,0.7,29.3c-1.3,7.3-0.8,15.3,2.4,22.1c0.7,1.5,1.6,3,2.6,4.3c0.5,0.7,1,1.3,1.6,1.9
                         c1-0.4,2-0.8,3-1.4c3.9-2.2,6.8-5.6,10.2-8.5c-11.2-13,0.7-29.1,15.5-32.6c13.8-3.3,32.6,2.4,36.8,16.6c1.7,5.9,0.6,12.4-4.2,16.7
                         c-2.5,2.2-5.7,3.7-9.1,4.3c-2,0.3-4,0.4-6,0.2c-1.1-0.1-2.2-0.3-3.3-0.6c-1.8-0.4-3.5-0.4-3.5-2.4c0-5.2,0-10.4,0-15.6
                         c0-2.6,0-5.2,0-7.8c0-1.6,0.2-1.3-1.2-1.5c-1-0.1-2.1-0.2-3.1-0.3c-3.7-0.3-7.5-0.5-11.1,0.1c-1.4,0.2-1.4,0-1.4,1.5
@@ -491,14 +492,14 @@
                         </svg>
                     </a>
                 </div>
-                <div class="footer_social__youtube">
+                <div class="social__youtube">
                     <a href="">
                         <?xml version="1.0" encoding="utf-8"?>
                         <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg width="50" height="50" version="1.1" class="Icons" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 180 100" style="enable-background:new 0 0 0 0;"
+                        <svg  version="1.1" class="Icons" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 180 100" fill="#cccccc" style="enable-background:new 0 0 0 0;"
                             xml:space="preserve">
-                            <path id="YouTube_2_" d="M63.4,65.8h-4.9l0-2.9c0-1.3,1-2.3,2.3-2.3h0.3c1.3,0,2.3,1,2.3,2.3L63.4,65.8z M44.9,59.7
+                            <path width="50" height="50" id="YouTube_2_" d="M63.4,65.8h-4.9l0-2.9c0-1.3,1-2.3,2.3-2.3h0.3c1.3,0,2.3,1,2.3,2.3L63.4,65.8z M44.9,59.7
                         c-1.3,0-2.3,0.8-2.3,1.9v14c0,1,1,1.9,2.3,1.9c1.3,0,2.3-0.8,2.3-1.9v-14C47.2,60.5,46.2,59.7,44.9,59.7z M75,51.9v26.5
                         C75,84.8,69.5,90,62.7,90H12.3C5.5,90,0,84.8,0,78.4V51.9c0-6.4,5.5-11.6,12.3-11.6h50.5C69.5,40.3,75,45.5,75,51.9z M15.6,81.3
                         l0-28l6.3,0v-4.1l-16.7,0v4.1l5.2,0v28H15.6z M34.4,57.5h-5.2v14.9c0,2.2,0.1,3.2,0,3.6c-0.4,1.2-2.3,2.4-3.1,0.1
@@ -516,15 +517,15 @@
                         </svg>
                     </a>
                 </div>
-                <div class="footer_social__instagram">
+                <div class="social__instagram">
                     <a href="">
                         <?xml version="1.0" encoding="utf-8"?>
                         <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg width="50" height="50" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 180 100" style="enable-background:new 0 0 0 0;"
+                        <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 180 100" fill="#cccccc" style="enable-background:new 0 0 0 0;"
                             xml:space="preserve">
 
-                            <path class="st" d="M65.2,55.4c0-5.9-4.8-10.6-10.6-10.6c-5.9,0-10.6,4.8-10.6,10.6c0,5.9,4.8,10.6,10.6,10.6
+                            <path width="50" height="50" class="st" d="M65.2,55.4c0-5.9-4.8-10.6-10.6-10.6c-5.9,0-10.6,4.8-10.6,10.6c0,5.9,4.8,10.6,10.6,10.6
                         C60.4,66.1,65.2,61.3,65.2,55.4z" />
                             <path class="st" d="M81,0H27C12.1,0,0,12.1,0,27v7.5h39.7c4.2-3,9.3-4.8,14.8-4.8c5.5,0,10.6,1.8,14.8,4.8h20.1H108V27
                         C108,12.1,95.9,0,81,0z M92,25.7c0,1.6-1.3,3-3,3h-9.3c-1.7,0-3-1.4-3-3v-9.3c0-1.6,1.3-3,3-3H89c1.7,0,3,1.4,3,3V25.7z" />
@@ -549,8 +550,8 @@
             </div>
 
     </div>
-    <div class="footer_location">
-        <div class="footer_location__text">
+    <div class="location">
+        <div class="location__text">
             <span>LOCATION:<span id="location">UNITED STATES</span><br>LANGUAGE:<span id="language">ENGLISH</span></span>
         </div>
     </div>
