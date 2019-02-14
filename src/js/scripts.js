@@ -74,9 +74,9 @@ $(document).ready(function(){
  
   $(".fa-search").click(function(){
 
-    $(".top__wrap, .top__input").toggleClass("active");
+    $(".search__wrap, .search__input").toggleClass("active");
 
-    $("top__input[type='search']").focus();
+    $("search__input[type='search']").focus();
 
   });
   

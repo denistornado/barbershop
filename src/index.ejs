@@ -105,18 +105,16 @@
 
         <header class="header">
             <div class="top">
-                <div class="top__wrap">
-                    <form>
-                        <input type="text" class="top__input" placeholder="Find">
-                    </form>
+             
 
-                </div>
+              
                 <div class="adress">
-                    <span>NEARLIEST SALON</span> <img src="img/ico_dropdown.svg" height="10px" width="10px" alt=""><br><span
+                    <div class="adress__text">
+                    <span >NEARLIEST SALON</span> <img src="img/ico_dropdown.svg" height="10px" width="10px" alt=""><br><span
                         id="near-salon">
                         <% nearSalon.forEach((salon) => { %>
                         <%= salon.title %>
-                        <% }) %></span> </div>
+                        <% }) %></span> </div></div>
                 <div class="mobile-navigation">
                     <input type="checkbox" name="" id="choice">
                     <label class="choice-container" for="choice">
@@ -137,19 +135,30 @@
 
                     </ul>
                 </div>
-
-               
-                <img class="logo" src="img/logo.svg" height="60px" width="340px" alt="" >
-
-
-
-                <img class="fa fa-search" src="img/ico_search.svg" height="10px" width="10px" alt="">
-                
+                <div class="logo">
+                <img class="logo__item" src="https://matrix.ru/skin/frontend/matrix/default/img/new_logo-1.svg" height="57px" width="300px" alt="" >
             </div>
+<div class="search">
+        <div class="search__wrap">
+                <form>
+                    <input type="text" class="search__input" placeholder="Find">
+                </form>
+            </div>
+            <img class="fa fa-search" src="img/ico_search.svg" height="10px" width="10px" alt="">
+</div>
 
 
 
+  </div>
+               
             <div class="bottom">
+                    <div class="adress-mobile">
+                            <div class="adress__text">
+                            <span >NEARLIEST SALON</span> <img src="img/ico_dropdown.svg" height="10px" width="10px" alt=""><br><span
+                                id="near-salon">
+                                <% nearSalon.forEach((salon) => { %>
+                                <%= salon.title %>
+                                <% }) %></span> </div></div>
                 <div class="bottom__menu">
                     <ul class="bottom__list">
                         <% menuItems.forEach((item) => { %>
@@ -175,16 +184,16 @@
         </div>
         <section class="content">
             <div class="main-video">
-                <div class="main-video__title">
-                    <h1>VIDEOS</h1>
-                </div>
+              
+                    <h1 class="main-video__title">VIDEOS</h1>
+               
                 <div class=main-video__container> 
                        
                 <a data-fancybox="gallery" href="https://www.youtube.com/embed/8H6dYUgQKB8?start=4" width=800; height=600;>
-                    <img  class="play-main"src="img/play5.png" alt=""> <img 
-                        src="https://img.youtube.com/vi/8H6dYUgQKB8/maxresdefault.jpg" width="100%" height="490"></a>
+                    <img  class="play-main"src="img/play5.png" alt=""> <img class="main-video__item"
+                        src="https://img.youtube.com/vi/8H6dYUgQKB8/maxresdefault.jpg" ></a>
                     </div>
-                <p class="main-video__discription"> <strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Non corporis blanditiis perspiciatis ipsum officiis harum, it amet consectetur adipisicing elit. Non corporis blanditiis.</strong></p>
+                <p class="main-video__discription"> <strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Non corporis blanditiis perspiciatis ipsum officiis harum, it amet consectetur adipisicing elit. Non corporis .</strong></p>
                 <hr color="gray">
             </div>
 
@@ -290,16 +299,16 @@
                
                
                 <div class="content-<%-test[i][0].class%>_gallery-mobile gallery-mobile" >
-                    <div class="content-<%-test[i][0].class%>_gallery-mobile__view gallery-mobile__view" style="  height: 1050px;
+                    <div class="content-<%-test[i][0].class%>_gallery-mobile__view gallery-mobile__view" style="  height: 900px;
                             transition :all .1s linear .25s;
                                 overflow: hidden;">
                         <div class="content-<%-test[i][0].class%>_gallery-mobile__line gallery-mobile__line">
                             <% for(var j=0;j<test[i].length;j++){ %> 
-                        <div class="light-<%-test[i][0].class%>" style="height:350px">
+                        <div class="light-<%-test[i][0].class%>" style="height:300px">
                             <div class="play-mobile-container">
                             <a data-fancybox="gallery" href="http://www.youtube.com/embed/<%= test[i][j].href %>?" width=800;
                                 height=600;><img src="https://img.youtube.com/vi/<%= test[i][j].href %>/maxresdefault.jpg"
-                                    width="100%" height="330">  <img  class="play-mobile"src="img/play5.png" alt=""></a>
+                                    width="100%" height="280">  <img  class="play-mobile"src="img/play5.png" alt=""></a>
                                 </div>
                         </div>
                         <% } %>
