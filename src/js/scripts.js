@@ -1,35 +1,35 @@
 const test = [
   [
-    {href: 'z8M0Fa1JVco',class:'step-by-step'},
-    {href: 'Wi2KcdoCuo4',class:'step-by-step'},
-    {href: '8H6dYUgQKB8',class:'step-by-step'},
-    {href: 'PZjGrmHdFME',class:'step-by-step'},
-    {href: '_wLGr24VeoI',class:'step-by-step'},
-    {href: 'DG4FAU5qmMY',class:'step-by-step'},
+    {href: 'z8M0Fa1JVco',class:'step-by-step',title:'STEP BY STEP'},
+    {href: 'Wi2KcdoCuo4',class:'step-by-step',title:'STEP BY STEP'},
+    {href: '8H6dYUgQKB8',class:'step-by-step',title:'STEP BY STEP'},
+    {href: 'PZjGrmHdFME',class:'step-by-step',title:'STEP BY STEP'},
+    {href: '_wLGr24VeoI',class:'step-by-step',title:'STEP BY STEP'},
+    {href: 'DG4FAU5qmMY',class:'step-by-step',title:'STEP BY STEP'},
     
-],
- 
+  ],
+  
   [
   
   
-    {href: 'RmNWNLXmswk',class:'craft-education'},
-    {href: '-tztXOz8Vc0',class:'craft-education'},
-    {href: 'kUfIVtyydgQ',class:'craft-education'},
-    {href: 'kUfIVtyydgQ',class:'craft-education'},
-    {href: 'kUfIVtyydgQ',class:'craft-education'},
+    {href: 'RmNWNLXmswk',class:'craft-education',title:'CRAFT EDUCATION'},
+    {href: '-tztXOz8Vc0',class:'craft-education',title:'CRAFT EDUCATION'},
+    {href: 'kUfIVtyydgQ',class:'craft-education',title:'CRAFT EDUCATION'},
+    {href: 'kUfIVtyydgQ',class:'craft-education',title:'CRAFT EDUCATION'},
+    {href: 'kUfIVtyydgQ',class:'craft-education',title:'CRAFT EDUCATION'},
   
-],
-   [
-      {href: 'PZjGrmHdFME',class:'inspiration'},
-      {href: 'vz0k8O-Ef9Y',class:'inspiration'},
-      {href: '6oPBFnsqJW8',class:'inspiration'},
-      {href: '6oPBFnsqJW8',class:'inspiration'},
-      {href: '6oPBFnsqJW8',class:'inspiration'},
-      {href: '6oPBFnsqJW8',class:'inspiration'},
-      
   ],
- 
- 
+  [
+  {href: 'PZjGrmHdFME',class:'inspiration',title:'INSPIRATION'},
+  {href: 'vz0k8O-Ef9Y',class:'inspiration',title:'INSPIRATION'},
+  {href: '6oPBFnsqJW8',class:'inspiration',title:'INSPIRATION'},
+  {href: '6oPBFnsqJW8',class:'inspiration',title:'INSPIRATION'},
+  {href: '6oPBFnsqJW8',class:'inspiration',title:'INSPIRATION'},
+  {href: '6oPBFnsqJW8',class:'inspiration',title:'INSPIRATION'},
+  
+  ],
+  
+  
   
   
   ];
